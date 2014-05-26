@@ -19,6 +19,8 @@
 		7257668E1933D08700879646 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 725766761933D08600879646 /* UIKit.framework */; };
 		725766961933D08700879646 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 725766941933D08700879646 /* InfoPlist.strings */; };
 		725766981933D08700879646 /* jogoPalitoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 725766971933D08700879646 /* jogoPalitoTests.m */; };
+		883782501933D8A7003C183D /* BEPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8837824E1933D8A7003C183D /* BEPMainViewController.m */; };
+		883782511933D8A7003C183D /* BEPMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8837824F1933D8A7003C183D /* BEPMainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,9 @@
 		725766931933D08700879646 /* jogoPalitoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "jogoPalitoTests-Info.plist"; sourceTree = "<group>"; };
 		725766951933D08700879646 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		725766971933D08700879646 /* jogoPalitoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = jogoPalitoTests.m; sourceTree = "<group>"; };
+		8837824D1933D8A7003C183D /* BEPMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEPMainViewController.h; sourceTree = "<group>"; };
+		8837824E1933D8A7003C183D /* BEPMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEPMainViewController.m; sourceTree = "<group>"; };
+		8837824F1933D8A7003C183D /* BEPMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BEPMainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +114,9 @@
 			children = (
 				725766811933D08600879646 /* BEPAppDelegate.h */,
 				725766821933D08600879646 /* BEPAppDelegate.m */,
+				8837824D1933D8A7003C183D /* BEPMainViewController.h */,
+				8837824E1933D8A7003C183D /* BEPMainViewController.m */,
+				8837824F1933D8A7003C183D /* BEPMainViewController.xib */,
 				725766841933D08600879646 /* Images.xcassets */,
 				725766791933D08600879646 /* Supporting Files */,
 			);
@@ -222,6 +230,7 @@
 			files = (
 				7257667D1933D08600879646 /* InfoPlist.strings in Resources */,
 				725766851933D08600879646 /* Images.xcassets in Resources */,
+				883782511933D8A7003C183D /* BEPMainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +251,7 @@
 			files = (
 				725766831933D08600879646 /* BEPAppDelegate.m in Sources */,
 				7257667F1933D08600879646 /* main.m in Sources */,
+				883782501933D8A7003C183D /* BEPMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +448,7 @@
 				7257669D1933D08700879646 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7257669E1933D08700879646 /* Build configuration list for PBXNativeTarget "jogoPalitoTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +457,7 @@
 				725766A01933D08700879646 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
