@@ -18,6 +18,6 @@
 
 - (UIImageView *) novoPalito:(int)posicao;
 - (IBAction) incrementaPalito:(id)sender;
-- (void) verificaPalitos:(int) palitos:(UIView *) tela;
+- (void) verificaPalitos:(int) palitos:(UIView *) telaAdd: (UIView *) telaRemove;
 
 @end

@@ -38,15 +38,17 @@
     //int valorMao = (int) self.viewPalitoMao.subviews.count;
     //int valorFora = (int) self.viewPalitoFora.subviews.count;
     int valorInc = (int) incrementador.value;
-    [self verificaPalitos:valorInc :self.viewPalitoMao];
+    [self verificaPalitos:valorInc :self.viewPalitoMao:self.viewPalitoFora];
     
 }
 
-- (void)verificaPalitos:(int)palitos :(UIView *)tela
+- (void)verificaPalitos:(int)palitos :(UIView *)telaAdd :(UIView *)telaRemove
 {
-    tela = [[UIView alloc] init];
+    //telaAdd = [[UIView alloc] init];
     for (int i = 0; i < palitos; i++) {
-        [tela addSubview:[self novoPalito:40 * i+1]];
+        NSLog(@"entrou");
+        [telaAdd addSubview:[self novoPalito:40 * i+1]];
+        [telaRemove removeFromSuperview];
     }
     
 }
