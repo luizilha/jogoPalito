@@ -10,4 +10,14 @@
 
 @interface BEPMainViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIView *viewPalitoFora;
+@property (weak, nonatomic) IBOutlet UIView *viewPalitoMao;
+@property (nonatomic) int valorNaMao;
+
+- (IBAction)confirmaEscolha:(id)sender;
+
+- (UIImageView *) novoPalito:(int)posicao;
+- (IBAction) incrementaPalito:(id)sender;
+- (void) verificaPalitos:(int) palitos: (UIView *) tela;
+
 @end

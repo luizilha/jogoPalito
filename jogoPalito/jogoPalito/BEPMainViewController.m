@@ -23,9 +23,42 @@
     return self;
 }
 
+- (UIImageView *)novoPalito:(int)posicao
+{
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(posicao, 0, 100, 150)];
+    UIImage *image = [UIImage imageNamed:@"palito.png"];
+    imageView.image = image;
+    return imageView;
+}
+
+- (IBAction)incrementaPalito:(id)sender
+{
+    UIStepper *incrementador = (UIStepper *) sender;
+    
+    int valorMao = self.viewPalitoMao.subviews.count;
+    int valorFora = self.viewPalitoFora.subviews.count;
+    int valorInc = (int) incrementador.value;
+    [self verificaPalitos:valorInc :];
+    
+}
+
+- (void)verificaPalitos:(int)palitos :(UIView *)tela
+{
+    tela = [[UIView alloc] init];
+    for (int i = 0; i < palitos; i++) {
+        [tela addSubview:[self novoPalito:40 * i+1]];
+    }
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.valorNaMao = 0;
+    [self.viewPalitoFora addSubview:[self novoPalito:40]];
+    [self.viewPalitoFora addSubview:[self novoPalito:80]];
+    [self.viewPalitoFora addSubview:[self novoPalito:120]];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -34,5 +67,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (IBAction)confirmaEscolha:(id)sender
+{
+    
+}
+
 
 @end
