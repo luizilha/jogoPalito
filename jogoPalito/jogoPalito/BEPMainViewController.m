@@ -34,21 +34,25 @@
 - (IBAction)incrementaPalito:(id)sender
 {
     UIStepper *incrementador = (UIStepper *) sender;
-    
-    //int valorMao = (int) self.viewPalitoMao.subviews.count;
-    //int valorFora = (int) self.viewPalitoFora.subviews.count;
     int valorInc = (int) incrementador.value;
     [self verificaPalitos:valorInc :self.viewPalitoMao:self.viewPalitoFora];
-    
 }
 
 - (void)verificaPalitos:(int)palitos :(UIView *)telaAdd :(UIView *)telaRemove
 {
-    //telaAdd = [[UIView alloc] init];
+    while (telaRemove.subviews.count != 0) {
+        UIView *view = [telaRemove.subviews objectAtIndex:0];
+        [view removeFromSuperview];
+    }
+    while (telaAdd.subviews.count != 0) {
+        UIView *view = [telaAdd.subviews objectAtIndex:0];
+        [view removeFromSuperview];
+    }
+    for (int i = 0; i < (3 - palitos) ; i++) {
+        [telaRemove addSubview:[self novoPalito:40 * i+1]];
+    }
     for (int i = 0; i < palitos; i++) {
-        NSLog(@"entrou");
         [telaAdd addSubview:[self novoPalito:40 * i+1]];
-        [telaRemove removeFromSuperview];
     }
     
 }
