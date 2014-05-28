@@ -25,46 +25,42 @@
 
 - (UIImageView *)novoPalito:(int)posicao
 {
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(posicao, 0, 100, 150)];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(posicao, 0, 100, 180)];
     UIImage *image = [UIImage imageNamed:@"palito.png"];
     imageView.image = image;
     return imageView;
 }
 
-- (IBAction)incrementaPalito:(id)sender
+- (IBAction)palitoFora:(id)sender
 {
-    UIStepper *incrementador = (UIStepper *) sender;
-    int valorInc = (int) incrementador.value;
-    [self verificaPalitos:valorInc :self.viewPalitoMao:self.viewPalitoFora];
+    if(self.incrementador > 0) {
+        self.incrementador--;
+        UIView *view = [self.viewPalitoMao.subviews objectAtIndex:0];
+        [view removeFromSuperview];
+        [self.viewPalitoFora addSubview:[self novoPalito:80*self.incrementador]];
+    }
 }
 
-- (void)verificaPalitos:(int)palitos :(UIView *)telaAdd :(UIView *)telaRemove
+- (IBAction)palitoMao:(id)sender
 {
-    while (telaRemove.subviews.count != 0) {
-        UIView *view = [telaRemove.subviews objectAtIndex:0];
+    NSLog(@"%d %d",self.incrementador, self.jogador.max);
+    if(self.incrementador < self.jogador.max) {
+        UIView *view = [self.viewPalitoFora.subviews objectAtIndex:0];
         [view removeFromSuperview];
+        [self.viewPalitoMao addSubview:[self novoPalito:80*self.incrementador]];
+        self.incrementador++;
     }
-    while (telaAdd.subviews.count != 0) {
-        UIView *view = [telaAdd.subviews objectAtIndex:0];
-        [view removeFromSuperview];
-    }
-    for (int i = 0; i < (3 - palitos) ; i++) {
-        [telaRemove addSubview:[self novoPalito:40 * i+1]];
-    }
-    for (int i = 0; i < palitos; i++) {
-        [telaAdd addSubview:[self novoPalito:40 * i+1]];
-    }
-    
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.valorNaMao = 0;
-    [self.viewPalitoFora addSubview:[self novoPalito:40]];
+    self.incrementador = 0;
+    self.jogador = [[BEPJogador alloc] init];
+    self.jogador.max = 3;
+    [self.viewPalitoFora addSubview:[self novoPalito:0]];
     [self.viewPalitoFora addSubview:[self novoPalito:80]];
-    [self.viewPalitoFora addSubview:[self novoPalito:120]];
+    [self.viewPalitoFora addSubview:[self novoPalito:160]];
     // Do any additional setup after loading the view from its nib.
 }
 
