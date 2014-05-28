@@ -35,10 +35,10 @@
 {
     UIStepper *incrementador = (UIStepper *) sender;
     
-    int valorMao = self.viewPalitoMao.subviews.count;
-    int valorFora = self.viewPalitoFora.subviews.count;
+    //int valorMao = (int) self.viewPalitoMao.subviews.count;
+    //int valorFora = (int) self.viewPalitoFora.subviews.count;
     int valorInc = (int) incrementador.value;
-    [self verificaPalitos:valorInc :];
+    [self verificaPalitos:valorInc :self.viewPalitoMao];
     
 }
 
