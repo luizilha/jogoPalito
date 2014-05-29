@@ -17,10 +17,10 @@
 @property int incrementador;
 
 - (IBAction)confirmaEscolha:(id)sender;
-
 - (UIImageView *) novoPalito:(int)posicao;
 - (IBAction)palitoFora:(id)sender;
 - (IBAction)palitoMao:(id)sender;
+//- (void) incrementaPalito:(int) palitos andAdiciona:(UIView *) adiciona;
 
 
 @end

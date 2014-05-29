@@ -33,21 +33,24 @@
 
 - (IBAction)palitoFora:(id)sender
 {
+    NSLog(@"FORA %d",self.incrementador);
     if(self.incrementador > 0) {
         self.incrementador--;
-        UIView *view = [self.viewPalitoMao.subviews objectAtIndex:0];
+        NSLog(@"%d", self.viewPalitoMao.subviews.count);
+        UIView *view = [self.viewPalitoMao.subviews objectAtIndex:self.viewPalitoMao.subviews.count-1];
         [view removeFromSuperview];
-        [self.viewPalitoFora addSubview:[self novoPalito:80*self.incrementador]];
+        [self.viewPalitoFora addSubview:[self novoPalito:(80 * self.incrementador)]];
     }
 }
 
 - (IBAction)palitoMao:(id)sender
 {
-    NSLog(@"%d %d",self.incrementador, self.jogador.max);
+    NSLog(@"MAO %d",self.incrementador);
     if(self.incrementador < self.jogador.max) {
-        UIView *view = [self.viewPalitoFora.subviews objectAtIndex:0];
+        NSLog(@"%d", self.viewPalitoFora.subviews.count);
+        UIView *view = [self.viewPalitoFora.subviews objectAtIndex:self.viewPalitoFora.subviews.count-1];
         [view removeFromSuperview];
-        [self.viewPalitoMao addSubview:[self novoPalito:80*self.incrementador]];
+        [self.viewPalitoMao addSubview:[self novoPalito:(80 * self.incrementador)]];
         self.incrementador++;
     }
 }
