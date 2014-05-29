@@ -25,13 +25,13 @@
 
 - (UIImageView *)novoPalito:(int)posicao
 {
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(posicao, 0, 100, 150)];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(posicao, 0, 100, 180)];
     UIImage *image = [UIImage imageNamed:@"palito.png"];
     imageView.image = image;
     return imageView;
 }
 
-- (IBAction)incrementaPalito:(id)sender
+- (IBAction)palitoFora:(id)sender
 {
     UIStepper *incrementador = (UIStepper *) sender;
     
@@ -45,24 +45,24 @@
     
 }
 
-- (void)verificaPalitos:(int)palitos :(UIView *)telaAdd :(UIView *)telaRemove
+- (IBAction)palitoMao:(id)sender
 {
 
     for (int i = 0; i < palitos; i++) {
         NSLog(@"entrou");
         [telaAdd addSubview:[self novoPalito:40 * i+1]];
     }
-    
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.valorNaMao = 0;
-    [self.viewPalitoFora addSubview:[self novoPalito:40]];
+    self.incrementador = 0;
+    self.jogador = [[BEPJogador alloc] init];
+    self.jogador.max = 3;
+    [self.viewPalitoFora addSubview:[self novoPalito:0]];
     [self.viewPalitoFora addSubview:[self novoPalito:80]];
-    [self.viewPalitoFora addSubview:[self novoPalito:120]];
+    [self.viewPalitoFora addSubview:[self novoPalito:160]];
     // Do any additional setup after loading the view from its nib.
 }
 
