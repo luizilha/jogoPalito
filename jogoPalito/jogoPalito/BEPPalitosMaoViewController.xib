@@ -4,11 +4,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BEPMainViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BEPPalitosMaoViewController">
             <connections>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outlet property="viewPalitoFora" destination="ZaH-iM-bOJ" id="s7V-kq-kXP"/>
-                <outlet property="viewPalitoMao" destination="Oq3-Q8-yEy" id="aEr-Ur-2Ws"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="T3n-Ny-aLA"/>
+                <outlet property="viewPalitoFora" destination="ZaH-iM-bOJ" id="Uh6-oJ-r2G"/>
+                <outlet property="viewPalitoMao" destination="Oq3-Q8-yEy" id="pVv-nL-3Tl"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -30,7 +30,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="confirmaEscolha:" destination="-1" eventType="touchUpInside" id="Ma9-WW-LON"/>
+                        <action selector="confirmaEscolha:" destination="-1" eventType="touchUpInside" id="Nt6-0W-o60"/>
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oq3-Q8-yEy">
@@ -55,7 +55,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="palitoMao:" destination="-1" eventType="touchUpInside" id="6fV-UI-AiJ"/>
+                        <action selector="palitoMao:" destination="-1" eventType="touchUpInside" id="BZj-Rv-ENH"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YX7-Ru-WUC">
@@ -67,7 +67,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="palitoFora:" destination="-1" eventType="touchUpInside" id="Z3V-Ce-JOo"/>
+                        <action selector="palitoFora:" destination="-1" eventType="touchUpInside" id="gp3-4k-Poi"/>
                     </connections>
                 </button>
             </subviews>

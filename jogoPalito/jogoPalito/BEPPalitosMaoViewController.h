@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BEPJogador.h"
 
-@interface BEPMainViewController : UIViewController
+@interface BEPPalitosMaoViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIView *viewPalitoFora;
 @property (weak, nonatomic) IBOutlet UIView *viewPalitoMao;

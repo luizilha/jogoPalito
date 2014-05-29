@@ -20,8 +20,8 @@
 		725766961933D08700879646 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 725766941933D08700879646 /* InfoPlist.strings */; };
 		725766981933D08700879646 /* jogoPalitoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 725766971933D08700879646 /* jogoPalitoTests.m */; };
 		72B129F219367F6700EB6574 /* BEPJogador.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B129F119367F6700EB6574 /* BEPJogador.m */; };
-		883782501933D8A7003C183D /* BEPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8837824E1933D8A7003C183D /* BEPMainViewController.m */; };
-		883782511933D8A7003C183D /* BEPMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8837824F1933D8A7003C183D /* BEPMainViewController.xib */; };
+		883782501933D8A7003C183D /* BEPPalitosMaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8837824E1933D8A7003C183D /* BEPPalitosMaoViewController.m */; };
+		883782511933D8A7003C183D /* BEPPalitosMaoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8837824F1933D8A7003C183D /* BEPPalitosMaoViewController.xib */; };
 		88855BA41937B9E900B6850E /* BEPViewDefineQtdJogadores.m in Sources */ = {isa = PBXBuildFile; fileRef = 88855BA21937B9E900B6850E /* BEPViewDefineQtdJogadores.m */; };
 		88855BA51937B9E900B6850E /* BEPViewDefineQtdJogadores.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88855BA31937B9E900B6850E /* BEPViewDefineQtdJogadores.xib */; };
 /* End PBXBuildFile section */
@@ -55,9 +55,9 @@
 		725766971933D08700879646 /* jogoPalitoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = jogoPalitoTests.m; sourceTree = "<group>"; };
 		72B129F019367F6700EB6574 /* BEPJogador.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEPJogador.h; sourceTree = "<group>"; };
 		72B129F119367F6700EB6574 /* BEPJogador.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEPJogador.m; sourceTree = "<group>"; };
-		8837824D1933D8A7003C183D /* BEPMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEPMainViewController.h; sourceTree = "<group>"; };
-		8837824E1933D8A7003C183D /* BEPMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEPMainViewController.m; sourceTree = "<group>"; };
-		8837824F1933D8A7003C183D /* BEPMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BEPMainViewController.xib; sourceTree = "<group>"; };
+		8837824D1933D8A7003C183D /* BEPPalitosMaoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEPPalitosMaoViewController.h; sourceTree = "<group>"; };
+		8837824E1933D8A7003C183D /* BEPPalitosMaoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEPPalitosMaoViewController.m; sourceTree = "<group>"; };
+		8837824F1933D8A7003C183D /* BEPPalitosMaoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BEPPalitosMaoViewController.xib; sourceTree = "<group>"; };
 		88855BA11937B9E900B6850E /* BEPViewDefineQtdJogadores.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEPViewDefineQtdJogadores.h; sourceTree = "<group>"; };
 		88855BA21937B9E900B6850E /* BEPViewDefineQtdJogadores.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEPViewDefineQtdJogadores.m; sourceTree = "<group>"; };
 		88855BA31937B9E900B6850E /* BEPViewDefineQtdJogadores.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BEPViewDefineQtdJogadores.xib; sourceTree = "<group>"; };
@@ -122,9 +122,9 @@
 			children = (
 				725766811933D08600879646 /* BEPAppDelegate.h */,
 				725766821933D08600879646 /* BEPAppDelegate.m */,
-				8837824D1933D8A7003C183D /* BEPMainViewController.h */,
-				8837824E1933D8A7003C183D /* BEPMainViewController.m */,
-				8837824F1933D8A7003C183D /* BEPMainViewController.xib */,
+				8837824D1933D8A7003C183D /* BEPPalitosMaoViewController.h */,
+				8837824E1933D8A7003C183D /* BEPPalitosMaoViewController.m */,
+				8837824F1933D8A7003C183D /* BEPPalitosMaoViewController.xib */,
 				72B129F019367F6700EB6574 /* BEPJogador.h */,
 				72B129F119367F6700EB6574 /* BEPJogador.m */,
 				88855BA11937B9E900B6850E /* BEPViewDefineQtdJogadores.h */,
@@ -243,7 +243,7 @@
 			files = (
 				7257667D1933D08600879646 /* InfoPlist.strings in Resources */,
 				725766851933D08600879646 /* Images.xcassets in Resources */,
-				883782511933D8A7003C183D /* BEPMainViewController.xib in Resources */,
+				883782511933D8A7003C183D /* BEPPalitosMaoViewController.xib in Resources */,
 				88855BA51937B9E900B6850E /* BEPViewDefineQtdJogadores.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,7 +267,7 @@
 				88855BA41937B9E900B6850E /* BEPViewDefineQtdJogadores.m in Sources */,
 				725766831933D08600879646 /* BEPAppDelegate.m in Sources */,
 				7257667F1933D08600879646 /* main.m in Sources */,
-				883782501933D8A7003C183D /* BEPMainViewController.m in Sources */,
+				883782501933D8A7003C183D /* BEPPalitosMaoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Luiz Ilha Moschem. All rights reserved.
 //
 
-#import "BEPMainViewController.h"
+#import "BEPPalitosMaoViewController.h"
 
-@interface BEPMainViewController ()
+@interface BEPPalitosMaoViewController ()
 
 @end
 
-@implementation BEPMainViewController
+@implementation BEPPalitosMaoViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,7 +33,6 @@
 
 - (IBAction)palitoFora:(id)sender
 {
-    NSLog(@"FORA %d",self.incrementador);
     if(self.incrementador > 0) {
         self.incrementador--;
         UIView *view = [self.viewPalitoMao.subviews objectAtIndex:self.viewPalitoMao.subviews.count-1];
@@ -44,7 +43,7 @@
 
 - (IBAction)palitoMao:(id)sender
 {
-    NSLog(@"MAO %d",self.incrementador);
+
     if(self.incrementador < self.jogador.max) {
         UIView *view = [self.viewPalitoFora.subviews objectAtIndex:self.viewPalitoFora.subviews.count-1];
         [view removeFromSuperview];

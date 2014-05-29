@@ -58,6 +58,7 @@
 }
 
 - (IBAction)iniciarJogo:(id)sender {
-
+    BEPPalitosMaoViewController *v = [[BEPPalitosMaoViewController alloc] init];
+    [self presentViewController:v animated:YES completion:^{}];
 }
 @end
