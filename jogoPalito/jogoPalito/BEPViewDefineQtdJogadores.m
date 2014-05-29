@@ -7,7 +7,7 @@
 //
 
 #import "BEPViewDefineQtdJogadores.h"
-#import "BEPMainViewController.m"
+
 
 @interface BEPViewDefineQtdJogadores ()
 
@@ -39,13 +39,18 @@
 }
 
 - (IBAction)incrementador:(id)sender {
-    self.numJogadores++;
-    self.labelNumeroJogadores.text = [NSString stringWithFormat:@"%d",self.numJogadores];
+    if (self.numJogadores < 4) {
+        self.numJogadores++;
+        self.labelNumeroJogadores.text = [NSString stringWithFormat:@"%d",self.numJogadores];
+    }
+    
 }
 
 - (IBAction)descrementador:(id)sender {
-    self.numJogadores--;
-    self.labelNumeroJogadores.text = [NSString stringWithFormat:@"%d",self.numJogadores];
+    if (self.numJogadores > 0) {
+        self.numJogadores--;
+        self.labelNumeroJogadores.text = [NSString stringWithFormat:@"%d",self.numJogadores];
+    }
 
 }
 
@@ -53,7 +58,6 @@
 }
 
 - (IBAction)iniciarJogo:(id)sender {
-   BEPMainViewController *p = [[BEPMainViewController alloc]init];
-   [self presentViewController:p animated:YES completion:nil];
+
 }
 @end

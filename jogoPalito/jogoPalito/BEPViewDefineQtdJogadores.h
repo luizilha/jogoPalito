@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface BEPViewDefineQtdJogadores : UIViewController
+
 @property (weak, nonatomic) IBOutlet UILabel *labelNumeroJogadores;
 @property (nonatomic) int numJogadores;
+
 - (IBAction)incrementador:(id)sender;
 - (IBAction)descrementador:(id)sender;
 - (IBAction)voltarMenu:(id)sender;

@@ -7,7 +7,6 @@
 //
 
 #import "BEPAppDelegate.h"
-#import "BEPMainViewController.h"
 #import "BEPViewDefineQtdJogadores.h"
 
 @implementation BEPAppDelegate
