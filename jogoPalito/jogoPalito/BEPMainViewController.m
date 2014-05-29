@@ -33,24 +33,22 @@
 
 - (IBAction)palitoFora:(id)sender
 {
-    UIStepper *incrementador = (UIStepper *) sender;
-    
-    //int valorMao = (int) self.viewPalitoMao.subviews.count;
-    //int valorFora = (int) self.viewPalitoFora.subviews.count;
-    int valorInc = (int) incrementador.value;
-    if (valorInc < (int)incrementador.value) {
-        [self verificaPalitos:valorInc :self.viewPalitoMao:self.viewPalitoFora];
-    }else
-        [self verificaPalitos:valorInc :self.viewPalitoFora:self.viewPalitoMao];
-    
+    if(self.incrementador > 0) {
+        self.incrementador--;
+        UIView *view = [self.viewPalitoMao.subviews objectAtIndex:0];
+        [view removeFromSuperview];
+        [self.viewPalitoFora addSubview:[self novoPalito:80*self.incrementador]];
+    }
 }
 
 - (IBAction)palitoMao:(id)sender
 {
-
-    for (int i = 0; i < palitos; i++) {
-        NSLog(@"entrou");
-        [telaAdd addSubview:[self novoPalito:40 * i+1]];
+    NSLog(@"%d %d",self.incrementador, self.jogador.max);
+    if(self.incrementador < self.jogador.max) {
+        UIView *view = [self.viewPalitoFora.subviews objectAtIndex:0];
+        [view removeFromSuperview];
+        [self.viewPalitoMao addSubview:[self novoPalito:80*self.incrementador]];
+        self.incrementador++;
     }
 }
 

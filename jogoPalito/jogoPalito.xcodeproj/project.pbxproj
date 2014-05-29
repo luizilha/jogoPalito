@@ -22,6 +22,8 @@
 		72B129F219367F6700EB6574 /* BEPJogador.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B129F119367F6700EB6574 /* BEPJogador.m */; };
 		883782501933D8A7003C183D /* BEPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8837824E1933D8A7003C183D /* BEPMainViewController.m */; };
 		883782511933D8A7003C183D /* BEPMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8837824F1933D8A7003C183D /* BEPMainViewController.xib */; };
+		88855BA41937B9E900B6850E /* BEPViewDefineQtdJogadores.m in Sources */ = {isa = PBXBuildFile; fileRef = 88855BA21937B9E900B6850E /* BEPViewDefineQtdJogadores.m */; };
+		88855BA51937B9E900B6850E /* BEPViewDefineQtdJogadores.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88855BA31937B9E900B6850E /* BEPViewDefineQtdJogadores.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,9 @@
 		8837824D1933D8A7003C183D /* BEPMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEPMainViewController.h; sourceTree = "<group>"; };
 		8837824E1933D8A7003C183D /* BEPMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEPMainViewController.m; sourceTree = "<group>"; };
 		8837824F1933D8A7003C183D /* BEPMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BEPMainViewController.xib; sourceTree = "<group>"; };
+		88855BA11937B9E900B6850E /* BEPViewDefineQtdJogadores.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEPViewDefineQtdJogadores.h; sourceTree = "<group>"; };
+		88855BA21937B9E900B6850E /* BEPViewDefineQtdJogadores.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEPViewDefineQtdJogadores.m; sourceTree = "<group>"; };
+		88855BA31937B9E900B6850E /* BEPViewDefineQtdJogadores.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BEPViewDefineQtdJogadores.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +127,9 @@
 				8837824F1933D8A7003C183D /* BEPMainViewController.xib */,
 				72B129F019367F6700EB6574 /* BEPJogador.h */,
 				72B129F119367F6700EB6574 /* BEPJogador.m */,
+				88855BA11937B9E900B6850E /* BEPViewDefineQtdJogadores.h */,
+				88855BA21937B9E900B6850E /* BEPViewDefineQtdJogadores.m */,
+				88855BA31937B9E900B6850E /* BEPViewDefineQtdJogadores.xib */,
 				725766841933D08600879646 /* Images.xcassets */,
 				725766791933D08600879646 /* Supporting Files */,
 			);
@@ -236,6 +244,7 @@
 				7257667D1933D08600879646 /* InfoPlist.strings in Resources */,
 				725766851933D08600879646 /* Images.xcassets in Resources */,
 				883782511933D8A7003C183D /* BEPMainViewController.xib in Resources */,
+				88855BA51937B9E900B6850E /* BEPViewDefineQtdJogadores.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72B129F219367F6700EB6574 /* BEPJogador.m in Sources */,
+				88855BA41937B9E900B6850E /* BEPViewDefineQtdJogadores.m in Sources */,
 				725766831933D08600879646 /* BEPAppDelegate.m in Sources */,
 				7257667F1933D08600879646 /* main.m in Sources */,
 				883782501933D8A7003C183D /* BEPMainViewController.m in Sources */,
