@@ -27,7 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.numJogadores = 0;
+    self.numJogadores = 2;
     self.labelNumeroJogadores.text = [NSString stringWithFormat:@"%d",self.numJogadores];
     // Do any additional setup after loading the view from its nib.
 }
@@ -47,7 +47,7 @@
 }
 
 - (IBAction)descrementador:(id)sender {
-    if (self.numJogadores > 0) {
+    if (self.numJogadores > 2) {
         self.numJogadores--;
         self.labelNumeroJogadores.text = [NSString stringWithFormat:@"%d",self.numJogadores];
     }
@@ -59,6 +59,6 @@
 
 - (IBAction)iniciarJogo:(id)sender {
     BEPPalitosMaoViewController *v = [[BEPPalitosMaoViewController alloc] init];
-    [self presentViewController:v animated:YES completion:^{}];
+    [self.navigationController pushViewController:v animated:YES];
 }
 @end

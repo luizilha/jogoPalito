@@ -61,6 +61,7 @@
     [self.viewPalitoFora addSubview:[self novoPalito:0]];
     [self.viewPalitoFora addSubview:[self novoPalito:80]];
     [self.viewPalitoFora addSubview:[self novoPalito:160]];
+    self.title = @"Jogador 1";
     // Do any additional setup after loading the view from its nib.
 }
 
