@@ -24,6 +24,10 @@
 		883782511933D8A7003C183D /* BEPPalitosMaoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8837824F1933D8A7003C183D /* BEPPalitosMaoViewController.xib */; };
 		88855BA41937B9E900B6850E /* BEPViewDefineQtdJogadores.m in Sources */ = {isa = PBXBuildFile; fileRef = 88855BA21937B9E900B6850E /* BEPViewDefineQtdJogadores.m */; };
 		88855BA51937B9E900B6850E /* BEPViewDefineQtdJogadores.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88855BA31937B9E900B6850E /* BEPViewDefineQtdJogadores.xib */; };
+		88BCFE9D193F9F6E00F72C26 /* BEPViewMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BCFE9B193F9F6E00F72C26 /* BEPViewMain.m */; };
+		88BCFE9E193F9F6E00F72C26 /* BEPViewMain.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88BCFE9C193F9F6E00F72C26 /* BEPViewMain.xib */; };
+		88BCFEA2193FAEBF00F72C26 /* BEPViewDefineAposta.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BCFEA0193FAEBF00F72C26 /* BEPViewDefineAposta.m */; };
+		88BCFEA3193FAEBF00F72C26 /* BEPViewDefineAposta.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88BCFEA1193FAEBF00F72C26 /* BEPViewDefineAposta.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,12 @@
 		88855BA11937B9E900B6850E /* BEPViewDefineQtdJogadores.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEPViewDefineQtdJogadores.h; sourceTree = "<group>"; };
 		88855BA21937B9E900B6850E /* BEPViewDefineQtdJogadores.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEPViewDefineQtdJogadores.m; sourceTree = "<group>"; };
 		88855BA31937B9E900B6850E /* BEPViewDefineQtdJogadores.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BEPViewDefineQtdJogadores.xib; sourceTree = "<group>"; };
+		88BCFE9A193F9F6E00F72C26 /* BEPViewMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEPViewMain.h; sourceTree = "<group>"; };
+		88BCFE9B193F9F6E00F72C26 /* BEPViewMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEPViewMain.m; sourceTree = "<group>"; };
+		88BCFE9C193F9F6E00F72C26 /* BEPViewMain.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BEPViewMain.xib; sourceTree = "<group>"; };
+		88BCFE9F193FAEBF00F72C26 /* BEPViewDefineAposta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEPViewDefineAposta.h; sourceTree = "<group>"; };
+		88BCFEA0193FAEBF00F72C26 /* BEPViewDefineAposta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEPViewDefineAposta.m; sourceTree = "<group>"; };
+		88BCFEA1193FAEBF00F72C26 /* BEPViewDefineAposta.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BEPViewDefineAposta.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +142,12 @@
 				88855BA31937B9E900B6850E /* BEPViewDefineQtdJogadores.xib */,
 				725766841933D08600879646 /* Images.xcassets */,
 				725766791933D08600879646 /* Supporting Files */,
+				88BCFE9A193F9F6E00F72C26 /* BEPViewMain.h */,
+				88BCFE9B193F9F6E00F72C26 /* BEPViewMain.m */,
+				88BCFE9C193F9F6E00F72C26 /* BEPViewMain.xib */,
+				88BCFE9F193FAEBF00F72C26 /* BEPViewDefineAposta.h */,
+				88BCFEA0193FAEBF00F72C26 /* BEPViewDefineAposta.m */,
+				88BCFEA1193FAEBF00F72C26 /* BEPViewDefineAposta.xib */,
 			);
 			path = jogoPalito;
 			sourceTree = "<group>";
@@ -242,6 +258,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7257667D1933D08600879646 /* InfoPlist.strings in Resources */,
+				88BCFEA3193FAEBF00F72C26 /* BEPViewDefineAposta.xib in Resources */,
+				88BCFE9E193F9F6E00F72C26 /* BEPViewMain.xib in Resources */,
 				725766851933D08600879646 /* Images.xcassets in Resources */,
 				883782511933D8A7003C183D /* BEPPalitosMaoViewController.xib in Resources */,
 				88855BA51937B9E900B6850E /* BEPViewDefineQtdJogadores.xib in Resources */,
@@ -264,7 +282,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				72B129F219367F6700EB6574 /* BEPJogador.m in Sources */,
+				88BCFE9D193F9F6E00F72C26 /* BEPViewMain.m in Sources */,
 				88855BA41937B9E900B6850E /* BEPViewDefineQtdJogadores.m in Sources */,
+				88BCFEA2193FAEBF00F72C26 /* BEPViewDefineAposta.m in Sources */,
 				725766831933D08600879646 /* BEPAppDelegate.m in Sources */,
 				7257667F1933D08600879646 /* main.m in Sources */,
 				883782501933D8A7003C183D /* BEPPalitosMaoViewController.m in Sources */,

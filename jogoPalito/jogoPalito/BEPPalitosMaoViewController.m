@@ -7,6 +7,7 @@
 //
 
 #import "BEPPalitosMaoViewController.h"
+#import "BEPViewDefineAposta.h"
 
 @interface BEPPalitosMaoViewController ()
 
@@ -23,9 +24,11 @@
     return self;
 }
 
+
+
 - (UIImageView *)novoPalito:(int)posicao
 {
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(posicao, 0, 100, 180)];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(posicao, 0, 100, 130)];
     UIImage *image = [UIImage imageNamed:@"palito.png"];
     imageView.image = image;
     return imageView;
@@ -73,7 +76,9 @@
 
 - (IBAction)confirmaEscolha:(id)sender
 {
-    
+    BEPViewDefineAposta *viewDefineAposta = [[BEPViewDefineAposta alloc]init];
+    viewDefineAposta.valorMinRec = self.incrementador;
+   UINavigationController *v = [[UINavigationController alloc] initWithRootViewController:viewDefineAposta];
 }
 
 

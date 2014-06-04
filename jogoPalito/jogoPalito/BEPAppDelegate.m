@@ -7,7 +7,7 @@
 //
 
 #import "BEPAppDelegate.h"
-#import "BEPViewDefineQtdJogadores.h"
+#import "BEPViewMain.h"
 
 @implementation BEPAppDelegate
 
@@ -15,7 +15,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    BEPViewDefineQtdJogadores *main = [[BEPViewDefineQtdJogadores alloc] init];
+    BEPViewMain *main = [[BEPViewMain alloc] init];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:main];
     self.window.rootViewController = nav;
     self.window.backgroundColor = [UIColor whiteColor];

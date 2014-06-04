@@ -24,6 +24,7 @@
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -58,7 +59,8 @@
 }
 
 - (IBAction)iniciarJogo:(id)sender {
-    BEPPalitosMaoViewController *v = [[BEPPalitosMaoViewController alloc] init];
-    [self.navigationController pushViewController:v animated:YES];
+        BEPPalitosMaoViewController *v = [[BEPPalitosMaoViewController alloc] init];
+        [self.navigationController pushViewController:v animated:YES];
+    
 }
 @end
