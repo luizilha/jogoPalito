@@ -26,11 +26,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.valorMaxRec = (12 - (3-self.valorMinRec));
-    self.ValorMin.text = [NSString stringWithFormat:@"%d",self.valorMinRec];
+    self.jogador = self.jogadores[0];
+    self.valorMaxRec = (12 - (3-self.jogador.palitoMao));
+    self.ValorMin.text = [NSString stringWithFormat:@"%d",self.jogador.palitoMao];
     self.ValorMax.text = [NSString stringWithFormat:@"%d",self.valorMaxRec];
-    self.valorAposta = self.valorMinRec;
-    self.Aposta.text = [NSString stringWithFormat:@"%d",self.valorAposta];
+    self.jogador.aposta = self.jogador.palitoMao;
+    self.Aposta.text = [NSString stringWithFormat:@"%d",self.jogador.aposta];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -41,18 +42,20 @@
 }
 
 - (IBAction)IncrementaAposta:(id)sender {
-    if (self.valorAposta < self.valorMaxRec) {
-        self.valorAposta++;
-        self.Aposta.text = [NSString stringWithFormat:@"%d",self.valorAposta];
+    if (self.jogador.aposta < self.valorMaxRec) {
+        self.jogador.aposta++;
+        self.Aposta.text = [NSString stringWithFormat:@"%d",self.jogador.aposta];
     }
 }
 
 - (IBAction)descrementaAposta:(id)sender {
-    if (self.valorAposta > self.valorMinRec) {
-        self.valorAposta--;
-        self.Aposta.text = [NSString stringWithFormat:@"%d",self.valorAposta];
+    if (self.jogador.aposta > self.jogador.palitoMao) {
+        self.jogador.aposta--;
+        self.Aposta.text = [NSString stringWithFormat:@"%d",self.jogador.aposta];
     }
 }
+
+
 
 - (IBAction)VerResultado:(id)sender {
 }

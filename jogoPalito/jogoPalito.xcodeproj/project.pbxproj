@@ -28,6 +28,8 @@
 		88BCFE9E193F9F6E00F72C26 /* BEPViewMain.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88BCFE9C193F9F6E00F72C26 /* BEPViewMain.xib */; };
 		88BCFEA2193FAEBF00F72C26 /* BEPViewDefineAposta.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BCFEA0193FAEBF00F72C26 /* BEPViewDefineAposta.m */; };
 		88BCFEA3193FAEBF00F72C26 /* BEPViewDefineAposta.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88BCFEA1193FAEBF00F72C26 /* BEPViewDefineAposta.xib */; };
+		88D1E8CE1940D5F500E4809A /* BEPViewApresentaResulSP.m in Sources */ = {isa = PBXBuildFile; fileRef = 88D1E8CC1940D5F500E4809A /* BEPViewApresentaResulSP.m */; };
+		88D1E8CF1940D5F500E4809A /* BEPViewApresentaResulSP.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88D1E8CD1940D5F500E4809A /* BEPViewApresentaResulSP.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,9 @@
 		88BCFE9F193FAEBF00F72C26 /* BEPViewDefineAposta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEPViewDefineAposta.h; sourceTree = "<group>"; };
 		88BCFEA0193FAEBF00F72C26 /* BEPViewDefineAposta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEPViewDefineAposta.m; sourceTree = "<group>"; };
 		88BCFEA1193FAEBF00F72C26 /* BEPViewDefineAposta.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BEPViewDefineAposta.xib; sourceTree = "<group>"; };
+		88D1E8CB1940D5F500E4809A /* BEPViewApresentaResulSP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEPViewApresentaResulSP.h; sourceTree = "<group>"; };
+		88D1E8CC1940D5F500E4809A /* BEPViewApresentaResulSP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEPViewApresentaResulSP.m; sourceTree = "<group>"; };
+		88D1E8CD1940D5F500E4809A /* BEPViewApresentaResulSP.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BEPViewApresentaResulSP.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +153,9 @@
 				88BCFE9F193FAEBF00F72C26 /* BEPViewDefineAposta.h */,
 				88BCFEA0193FAEBF00F72C26 /* BEPViewDefineAposta.m */,
 				88BCFEA1193FAEBF00F72C26 /* BEPViewDefineAposta.xib */,
+				88D1E8CB1940D5F500E4809A /* BEPViewApresentaResulSP.h */,
+				88D1E8CC1940D5F500E4809A /* BEPViewApresentaResulSP.m */,
+				88D1E8CD1940D5F500E4809A /* BEPViewApresentaResulSP.xib */,
 			);
 			path = jogoPalito;
 			sourceTree = "<group>";
@@ -263,6 +271,7 @@
 				725766851933D08600879646 /* Images.xcassets in Resources */,
 				883782511933D8A7003C183D /* BEPPalitosMaoViewController.xib in Resources */,
 				88855BA51937B9E900B6850E /* BEPViewDefineQtdJogadores.xib in Resources */,
+				88D1E8CF1940D5F500E4809A /* BEPViewApresentaResulSP.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +297,7 @@
 				725766831933D08600879646 /* BEPAppDelegate.m in Sources */,
 				7257667F1933D08600879646 /* main.m in Sources */,
 				883782501933D8A7003C183D /* BEPPalitosMaoViewController.m in Sources */,
+				88D1E8CE1940D5F500E4809A /* BEPViewApresentaResulSP.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

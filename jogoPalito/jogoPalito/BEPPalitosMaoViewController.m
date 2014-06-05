@@ -46,7 +46,6 @@
 
 - (IBAction)palitoMao:(id)sender
 {
-
     if(self.incrementador < self.jogador.max) {
         UIView *view = [self.viewPalitoFora.subviews objectAtIndex:self.viewPalitoFora.subviews.count-1];
         [view removeFromSuperview];
@@ -59,11 +58,10 @@
 {
     [super viewDidLoad];
     self.incrementador = 0;
-    self.jogador = [[BEPJogador alloc] init];
-    self.jogador.max = 3;
-    [self.viewPalitoFora addSubview:[self novoPalito:0]];
-    [self.viewPalitoFora addSubview:[self novoPalito:80]];
-    [self.viewPalitoFora addSubview:[self novoPalito:160]];
+    self.jogador = self.jogadores[0];
+    for (int i = 0; i < self.jogador.max; i++) {
+        [self.viewPalitoFora addSubview:[self novoPalito:(80 * i)]];
+    }
     self.title = @"Jogador 1";
     // Do any additional setup after loading the view from its nib.
 }
@@ -77,8 +75,9 @@
 - (IBAction)confirmaEscolha:(id)sender
 {
     BEPViewDefineAposta *viewDefineAposta = [[BEPViewDefineAposta alloc]init];
-    viewDefineAposta.valorMinRec = self.incrementador;
-   UINavigationController *v = [[UINavigationController alloc] initWithRootViewController:viewDefineAposta];
+    self.jogador.palitoMao = self.incrementador;
+    viewDefineAposta.jogadores = self.jogadores;
+    [self.navigationController pushViewController:viewDefineAposta animated:YES];
 }
 
 

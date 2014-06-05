@@ -8,6 +8,7 @@
 
 #import "BEPViewMain.h"
 #import "BEPPalitosMaoViewController.h"
+#import "BEPJogador.h"
 
 @interface BEPViewMain ()
 
@@ -38,6 +39,14 @@
 
 - (IBAction)botaoSinglePlayer:(id)sender {
     BEPPalitosMaoViewController *v = [[BEPPalitosMaoViewController alloc] init];
+    NSMutableArray *jogadores= [[NSMutableArray alloc]init];
+    BEPJogador *jogador = [[BEPJogador alloc]init];
+    jogador.max = 3;
+    [jogadores addObject:jogador];
+    [jogadores addObject:jogador];
+    [jogadores addObject:jogador];
+    [jogadores addObject:jogador];
+    v.jogadores = jogadores;
     [self.navigationController pushViewController:v animated:YES];
 }
 @end
