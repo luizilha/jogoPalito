@@ -40,12 +40,12 @@
 - (IBAction)botaoSinglePlayer:(id)sender {
     BEPPalitosMaoViewController *v = [[BEPPalitosMaoViewController alloc] init];
     NSMutableArray *jogadores= [[NSMutableArray alloc]init];
-    BEPJogador *jogador = [[BEPJogador alloc]init];
-    jogador.max = 3;
-    [jogadores addObject:jogador];
-    [jogadores addObject:jogador];
-    [jogadores addObject:jogador];
-    [jogadores addObject:jogador];
+    for(int i = 0; i < 4; i++){
+        BEPJogador *jogador = [[BEPJogador alloc]init];
+        jogador.max = 3;
+        [jogadores addObject:jogador];
+    }
+    v.rodada = 2;
     v.jogadores = jogadores;
     [self.navigationController pushViewController:v animated:YES];
 }

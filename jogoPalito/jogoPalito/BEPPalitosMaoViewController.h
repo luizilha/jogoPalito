@@ -13,9 +13,11 @@
 
 @property (weak, nonatomic) IBOutlet UIView *viewPalitoFora;
 @property (weak, nonatomic) IBOutlet UIView *viewPalitoMao;
+
 @property (nonatomic)int incrementador;
 @property (nonatomic)NSMutableArray *jogadores;
 @property (nonatomic)BEPJogador *jogador;
+@property(nonatomic) int rodada;
 
 - (IBAction)confirmaEscolha:(id)sender;
 - (UIImageView *) novoPalito:(int)posicao;

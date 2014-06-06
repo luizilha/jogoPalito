@@ -21,12 +21,14 @@
 @property(nonatomic) BEPJogador *jogador;
 @property(nonatomic) int valorMaxRec;
 @property(nonatomic) int jogadorPrim;
+@property(nonatomic) int rodada;
 
 - (IBAction)IncrementaAposta:(id)sender;
 - (IBAction)descrementaAposta:(id)sender;
 - (IBAction)VerResultado:(id)sender;
-
-
-
+- (int)defineMaxMesa:(NSMutableArray*)jogadores;
+-(int)defineMinMesa:(NSMutableArray*)jogadores;
+-(void)preencheLabel:(NSString*)texto label:(UILabel*)label;
+-(BOOL)validaAposta:(NSMutableArray*)jogadores valor:(int) valor;
 
 @end

@@ -77,6 +77,11 @@
     BEPViewDefineAposta *viewDefineAposta = [[BEPViewDefineAposta alloc]init];
     self.jogador.palitoMao = self.incrementador;
     viewDefineAposta.jogadores = self.jogadores;
+    viewDefineAposta.rodada = self.rodada;
+    for (int i = 1; i < [self.jogadores count]; i++) {
+        BEPJogador *jogador = self.jogadores[i];
+        jogador.palitoMao = arc4random() %jogador.max;
+    }
     [self.navigationController pushViewController:viewDefineAposta animated:YES];
 }
 
