@@ -7,6 +7,7 @@
 //
 
 #import "BEPViewDefineAposta.h"
+#import "BEPViewApresentaResulSP.h"
 
 @interface BEPViewDefineAposta ()
 
@@ -141,7 +142,11 @@
                 break;
         }
     }
-    sleep(500);
+    //sleep(4);
+    BEPViewApresentaResulSP *v = [[BEPViewApresentaResulSP alloc] init];
+    v.rodada = self.rodada;
+    v.jogadores = self.jogadores;
+    [self.navigationController pushViewController:v animated:YES];
 
 }
 @end
