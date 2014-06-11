@@ -57,8 +57,16 @@
 
 
 - (IBAction)iniciarJogo:(id)sender {
-        BEPPalitosMaoViewController *v = [[BEPPalitosMaoViewController alloc] init];
-        [self.navigationController pushViewController:v animated:YES];
+    BEPPalitosMaoViewController *v = [[BEPPalitosMaoViewController alloc] init];
+    int qtde = self.labelNumeroJogadores.text.intValue;
+    //v.jogadores = [[NSMutableArray alloc] initWithCapacity:BEPJogador.Byte * 5];
+    v.jogadores = [[NSMutableArray alloc]init];
+    for (int i =0; i < qtde ; i++) {
+        BEPJogador *jogador = [[BEPJogador alloc] init];
+        [v.jogadores addObject:jogador];
+    }
+    [self.navigationController pushViewController:v animated:YES];
+    
     
 }
 @end

@@ -10,5 +10,6 @@
 
 @interface BEPViewMain : UIViewController
 - (IBAction)botaoSinglePlayer:(id)sender;
+- (IBAction)multiplayer:(id)sender;
 
 @end
