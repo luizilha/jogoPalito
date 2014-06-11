@@ -55,8 +55,6 @@
 
 }
 
-- (IBAction)voltarMenu:(id)sender {
-}
 
 - (IBAction)iniciarJogo:(id)sender {
         BEPPalitosMaoViewController *v = [[BEPPalitosMaoViewController alloc] init];

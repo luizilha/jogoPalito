@@ -13,15 +13,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *ValorMin;
 @property (weak, nonatomic) IBOutlet UILabel *Aposta;
 @property (weak, nonatomic) IBOutlet UILabel *ValorMax;
-@property (weak, nonatomic) IBOutlet UILabel *player1;
-@property (weak, nonatomic) IBOutlet UILabel *player2;
-@property (weak, nonatomic) IBOutlet UILabel *player3;
 
 @property(nonatomic) NSMutableArray *jogadores;
 @property(nonatomic) BEPJogador *jogador;
 @property(nonatomic) int valorMaxRec;
 @property(nonatomic) int jogadorPrim;
 @property(nonatomic) int rodada;
+@property(nonatomic) NSMutableArray *labels;
 
 - (IBAction)IncrementaAposta:(id)sender;
 - (IBAction)descrementaAposta:(id)sender;
@@ -30,5 +28,6 @@
 -(int)defineMinMesa:(NSMutableArray*)jogadores;
 -(void)preencheLabel:(NSString*)texto label:(UILabel*)label;
 -(BOOL)validaAposta:(NSMutableArray*)jogadores valor:(int) valor;
+-(void)terminaPreenchimento:(NSMutableArray*)labels;
 
 @end

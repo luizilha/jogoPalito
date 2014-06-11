@@ -9,9 +9,9 @@
                 <outlet property="Aposta" destination="Lrt-Ss-D2A" id="8Y5-jR-Flk"/>
                 <outlet property="ValorMax" destination="GxN-ei-vH1" id="MEB-HC-sKh"/>
                 <outlet property="ValorMin" destination="2wn-nO-y6u" id="AKm-zn-L2o"/>
-                <outlet property="player1" destination="S1D-uK-noa" id="3XK-3f-CSt"/>
-                <outlet property="player2" destination="2KU-R9-VhC" id="Z1m-A4-CT5"/>
-                <outlet property="player3" destination="n9E-ap-w4F" id="dlu-Sp-htS"/>
+                <outlet property="player1" destination="S1D-uK-noa" id="UPl-m2-lo7"/>
+                <outlet property="player2" destination="2KU-R9-VhC" id="Uq5-tu-RtD"/>
+                <outlet property="player3" destination="n9E-ap-w4F" id="WsI-Kw-ge3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

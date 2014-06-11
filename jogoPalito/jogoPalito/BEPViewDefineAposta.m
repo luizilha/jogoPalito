@@ -10,6 +10,9 @@
 #import "BEPViewApresentaResulSP.h"
 
 @interface BEPViewDefineAposta ()
+@property (weak, nonatomic) IBOutlet UILabel *player1;
+@property (weak, nonatomic) IBOutlet UILabel *player2;
+@property (weak, nonatomic) IBOutlet UILabel *player3;
 
 @end
 
@@ -28,12 +31,16 @@
 {
     [super viewDidLoad];
     //Define adivinhações das maquinas antes da vez do usuario.
+    self.labels = [[NSMutableArray alloc]init];
+    [self.labels addObject:self.player1];
+    [self.labels addObject:self.player2];
+    [self.labels addObject:self.player3];
     int maxMesa = [self defineMaxMesa:self.jogadores];
     if(self.rodada > 1){
         for (int i = self.rodada; i <= [self.jogadores count]; i++ ) {
             BEPJogador * jogadorAux = self.jogadores[i-1];
             int aux = jogadorAux.palitoMao + arc4random() %(maxMesa - jogadorAux.palitoMao);
-            
+            NSLog(@"%d",i);
             //Valida adivinhações repetidas
             while ([self validaAposta:self.jogadores valor:aux] == false) {
                aux = jogadorAux.palitoMao + arc4random() %(maxMesa - jogadorAux.palitoMao);
@@ -43,24 +50,24 @@
             //Posiciona adivinhações em seus locais especificos
             switch (i) {
                 case 2:
-                    [self preencheLabel:[NSString stringWithFormat:@"%d",jogadorAux.aposta] label:self.player1];
+                    [self preencheLabel:[NSString stringWithFormat:@"%d",jogadorAux.aposta] label:[self.labels objectAtIndex:0]];
                     break;
                 case 3:
-                    [self preencheLabel:[NSString stringWithFormat:@"%d",jogadorAux.aposta] label:self.player2];
+                    [self preencheLabel:[NSString stringWithFormat:@"%d",jogadorAux.aposta] label:[self.labels objectAtIndex:1]];
                     break;
                 case 4:
-                    [self preencheLabel:[NSString stringWithFormat:@"%d",jogadorAux.aposta] label:self.player3];
+                    [self preencheLabel:[NSString stringWithFormat:@"%d",jogadorAux.aposta] label:[self.labels objectAtIndex:2]];
                     break;
             }
         }
     }
     //preenche os labels das telas
-    self.jogador = self.jogadores[0];
-    self.valorMaxRec = (maxMesa - (3-self.jogador.palitoMao));
-    [self preencheLabel:[NSString stringWithFormat:@"%d",self.jogador.palitoMao] label:self.ValorMin];
+    self.jogador = [[BEPJogador alloc]init];
+    self.valorMaxRec = (maxMesa - (3-[[self.jogadores objectAtIndex:0] palitoMao]));
+    [self preencheLabel:[NSString stringWithFormat:@"%d",[[self.jogadores objectAtIndex:0] palitoMao]] label:self.ValorMin];
     [self preencheLabel:[NSString stringWithFormat:@"%d",self.valorMaxRec] label:self.ValorMax];
-    self.jogador.aposta = self.jogador.palitoMao;
-    [self preencheLabel:[NSString stringWithFormat:@"%d",self.jogador.aposta] label:self.Aposta];
+    self.jogador.aposta =[[self.jogadores objectAtIndex:0]palitoMao];
+    [self preencheLabel:[NSString stringWithFormat:@"%d",[[self.jogadores objectAtIndex:0]palitoMao]] label:self.Aposta];
     
     // Do any additional setup after loading the view from its nib.
 }
@@ -79,7 +86,7 @@
 }
 
 - (IBAction)descrementaAposta:(id)sender {
-    if (self.jogador.aposta > self.jogador.palitoMao) {
+    if (self.jogador.aposta > [[self.jogadores objectAtIndex:0]palitoMao]) {
         self.jogador.aposta--;
         self.Aposta.text = [NSString stringWithFormat:@"%d",self.jogador.aposta];
     }
@@ -106,6 +113,7 @@
 
 -(void)preencheLabel:(NSString *)texto label:(UILabel *)label{
     label.text = texto;
+    label.textColor = [UIColor whiteColor];
 }
 
 -(BOOL)validaAposta:(NSMutableArray*)jogadores valor:(int) valor{
@@ -117,8 +125,7 @@
     return true;
 }
 
-- (IBAction)VerResultado:(id)sender {;
-    //define adivinhações das maquinas apos a aposta do usuario
+-(void)terminaPreenchimento:labels{
     int maxMesa = [self defineMaxMesa:self.jogadores];
     for (int i = 2; i <= (5-self.rodada); i++ ) {
         BEPJogador * jogadorAux = self.jogadores[i-1];
@@ -130,23 +137,22 @@
         }
         jogadorAux.aposta =aux;
         //Apresenta as adivinhações em seus campos especificos
-        switch (i) {
-            case 2:
-                [self preencheLabel:[NSString stringWithFormat:@"%d",jogadorAux.aposta] label:self.player1];
-                break;
-            case 3:
-                [self preencheLabel:[NSString stringWithFormat:@"%d",jogadorAux.aposta] label:self.player2];
-                break;
-            case 4:
-                [self preencheLabel:[NSString stringWithFormat:@"%d",jogadorAux.aposta] label:self.player3];
-                break;
-        }
+        [self preencheLabel:[NSString stringWithFormat:@"%d",jogadorAux.aposta] label:[self.labels objectAtIndex:i-2]];
+        [NSThread sleepForTimeInterval:1];
     }
-    //sleep(4);
-    BEPViewApresentaResulSP *v = [[BEPViewApresentaResulSP alloc] init];
-    v.rodada = self.rodada;
-    v.jogadores = self.jogadores;
-    [self.navigationController pushViewController:v animated:YES];
+}
 
+- (void)VerResultado:(id)sender {
+    //define adivinhações das maquinas apos a aposta do usuario
+    [self terminaPreenchimento:self.labels];
+    if ([self validaAposta:self.jogadores valor:self.jogador.aposta]) {
+        BEPJogador *jog = self.jogadores[0];
+        jog.aposta = self.jogador.aposta;
+        BEPViewApresentaResulSP *viewResul = [[BEPViewApresentaResulSP alloc] init];
+        viewResul.rodada = self.rodada;
+        viewResul.jogadores = self.jogadores;
+        [self.navigationController pushViewController:viewResul animated:YES];
+    }
+    
 }
 @end

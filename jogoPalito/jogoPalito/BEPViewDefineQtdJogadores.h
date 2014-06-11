@@ -16,7 +16,6 @@
 
 - (IBAction)incrementador:(id)sender;
 - (IBAction)descrementador:(id)sender;
-- (IBAction)voltarMenu:(id)sender;
 - (IBAction)iniciarJogo:(id)sender;
 
 

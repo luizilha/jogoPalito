@@ -49,7 +49,7 @@
             [self subtraiVencedor:self.qtdPalitosA3 and:self.apostaA3 and: [[self.jogadores objectAtIndex:3] max]-1];
             break;
     }
-    sleep(1000);
+    sleep(5000);
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -68,7 +68,7 @@
     
     int max = 0;
     int resul = 0;
-    int tSleep = 50;
+    int tSleep = 500;
     for (BEPJogador * jogador in jogadores ) {
         max += jogador.max;
         resul += jogador.palitoMao;
@@ -76,7 +76,7 @@
     
     for (int i = 0; i < 70; i++) {
         resultado.text = [NSString stringWithFormat:@"%d",arc4random()%max];
-        sleep(tSleep);
+        [NSThread sleepForTimeInterval:tSleep];
         tSleep += 10;
     }
     

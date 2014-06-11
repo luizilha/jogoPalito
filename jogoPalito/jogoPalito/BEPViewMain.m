@@ -45,7 +45,7 @@
         jogador.max = 3;
         [jogadores addObject:jogador];
     }
-    v.rodada = 2;
+    v.rodada = 1;
     v.jogadores = jogadores;
     [self.navigationController pushViewController:v animated:YES];
 }
