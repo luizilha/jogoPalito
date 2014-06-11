@@ -9,7 +9,7 @@
 #import "BEPViewMain.h"
 #import "BEPPalitosMaoViewController.h"
 #import "BEPJogador.h"
-
+#import "BEPViewDefineQtdJogadores.h"
 @interface BEPViewMain ()
 
 @end
@@ -49,4 +49,11 @@
     v.jogadores = jogadores;
     [self.navigationController pushViewController:v animated:YES];
 }
+
+- (IBAction)multiplayer:(id)sender {
+    BEPViewDefineQtdJogadores *qtde = [[BEPViewDefineQtdJogadores alloc] init];
+    [self.navigationController pushViewController:qtde animated:YES];
+}
+
+
 @end
