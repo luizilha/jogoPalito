@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6154.17" systemVersion="14A238x" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BEPViewDefineAposta">
@@ -9,6 +9,7 @@
                 <outlet property="Aposta" destination="Lrt-Ss-D2A" id="8Y5-jR-Flk"/>
                 <outlet property="ValorMax" destination="GxN-ei-vH1" id="MEB-HC-sKh"/>
                 <outlet property="ValorMin" destination="2wn-nO-y6u" id="AKm-zn-L2o"/>
+                <outlet property="avancarPag" destination="qwl-zL-bbh" id="Bvk-QY-6eh"/>
                 <outlet property="player1" destination="S1D-uK-noa" id="UPl-m2-lo7"/>
                 <outlet property="player2" destination="2KU-R9-VhC" id="Uq5-tu-RtD"/>
                 <outlet property="player3" destination="n9E-ap-w4F" id="WsI-Kw-ge3"/>
@@ -73,7 +74,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="VerResultado:" destination="-1" eventType="touchUpInside" id="Vd3-Kc-KHl"/>
+                        <action selector="VerResultado:" destination="-1" eventType="touchUpInside" id="XBJ-gh-Sht"/>
                     </connections>
                 </button>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1D-uK-noa">
@@ -89,6 +90,16 @@
                     <color key="textColor" red="0.99914662040000002" green="0.99708645689999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qwl-zL-bbh">
+                    <rect key="frame" x="103" y="495" width="111" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="avancar:" destination="-1" eventType="touchUpInside" id="Yue-7s-1h6"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>

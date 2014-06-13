@@ -27,31 +27,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"Carregou a view !");
-    int resul;
-    int vencedorAux;
     [self preencheLabel:self.qtdPalitosPlayer aposta:self.apostaPlayer jogador:self.jogadores[0]];
     [self preencheLabel:self.qtdPalitosA1 aposta:self.apostaA1 jogador:self.jogadores[1]];
     [self preencheLabel:self.qtdPalitosA2 aposta:self.apostaA2 jogador:self.jogadores[2]];
     [self preencheLabel:self.qtdPalitosA3 aposta:self.apostaA3 jogador:self.jogadores[3]];
-    resul = [self revelaResultado:self.resultado jogadores:self.jogadores];
-    vencedorAux = [self revelaVencedor:self.vencedor and:self.jogadores and:resul];
-    switch (vencedorAux) {
-        case 0:
-            [self subtraiVencedor:self.qtdPalitosPlayer and:self.apostaPlayer and: [[self.jogadores objectAtIndex:0] max]-1];
-            break;
-        case 1:
-            [self subtraiVencedor:self.qtdPalitosA1 and:self.apostaA1 and: [[self.jogadores objectAtIndex:1] max]-1];
-            break;
-        case 2:
-            [self subtraiVencedor:self.qtdPalitosA2 and:self.apostaA2 and: [[self.jogadores objectAtIndex:2] max]-1];
-            break;
-        case 3:
-            [self subtraiVencedor:self.qtdPalitosA3 and:self.apostaA3 and: [[self.jogadores objectAtIndex:3] max]-1];
-            break;
+    if (self.rodada != 2) {
+        self.avancarPag.hidden = YES;
     }
-    sleep(5000);
-    // Do any additional setup after loading the view from its nib.
+    
+        // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,17 +53,17 @@
     
     int max = 0;
     int resul = 0;
-    int tSleep = 500;
+    int tSleep = 0.01;
     for (BEPJogador * jogador in jogadores ) {
         max += jogador.max;
         resul += jogador.palitoMao;
     }
     
     for (int i = 0; i < 70; i++) {
-        resultado.text = [NSString stringWithFormat:@"%d",arc4random()%max];
+       resultado.text = [NSString stringWithFormat:@"%d",arc4random()%max];
         [NSThread sleepForTimeInterval:tSleep];
-        tSleep += 10;
-    }
+       tSleep += 0.1;
+   }
     
     resultado.text = [NSString stringWithFormat:@"%d", resul];
     return resul;
@@ -105,20 +89,47 @@
     
 }
 
--(void) subtraiVencedor:(UILabel *)palitos and:(UILabel *)aposta and:(int)qtdPalitos{
-    palitos.text = [NSString stringWithFormat:@"%d",qtdPalitos];
+-(void) subtraiVencedor:(UILabel *)palitos and:(UILabel *)aposta and:(BEPJogador *)jogador{
+    palitos.text = [NSString stringWithFormat:@"%d",jogador.max - 1];
     aposta.backgroundColor = [UIColor yellowColor];
 }
 
+- (IBAction)avancar:(id)sender {
+    BEPPalitosMaoViewController *v = [[BEPPalitosMaoViewController alloc] init];
+    if (self.rodada == 4) {
+        v.rodada = 1;
+    }else{
+        v.rodada = self.rodada+1;
+    }
+    v.jogadores = self.jogadores;
+    [self.navigationController pushViewController:v animated:YES];
+}
+
 - (IBAction)botaoOk:(id)sender {
-    if(([[self.jogadores objectAtIndex:0] max] == 0) || ([[self.jogadores objectAtIndex:1] max] == 1) || ([[self.jogadores objectAtIndex:2] max] == 0) || ([[self.jogadores objectAtIndex:0] max] == 3)){
+    int resul;
+    int vencedorAux;
+    resul = [self revelaResultado:self.resultado jogadores:self.jogadores];
+    vencedorAux = [self revelaVencedor:self.vencedor and:self.jogadores and:resul];
+    switch (vencedorAux) {
+        case 0:
+            [self subtraiVencedor:self.qtdPalitosPlayer and:self.apostaPlayer and: [self.jogadores objectAtIndex:0]] ;
+            break;
+        case 1:
+            [self subtraiVencedor:self.qtdPalitosA1 and:self.apostaA1 and: [self.jogadores objectAtIndex:1]];
+            break;
+        case 2:
+            [self subtraiVencedor:self.qtdPalitosA2 and:self.apostaA2 and: [self.jogadores objectAtIndex:2]];
+            break;
+        case 3:
+            [self subtraiVencedor:self.qtdPalitosA3 and:self.apostaA3 and: [self.jogadores objectAtIndex:3]];
+            break;
+    }
+
+    resul = [self revelaResultado:self.resultado jogadores:self.jogadores];
+    vencedorAux = [self revelaVencedor:self.vencedor and:self.jogadores and:resul];
+    if(([[self.jogadores objectAtIndex:0] max] == 0) || ([[self.jogadores objectAtIndex:1] max] == 0) || ([[self.jogadores objectAtIndex:2] max] == 0) || ([[self.jogadores objectAtIndex:0] max] == 0)){
         
     }
-    else{
-        BEPPalitosMaoViewController *v = [[BEPPalitosMaoViewController alloc] init];
-        v.rodada = self.rodada;
-        v.jogadores = self.jogadores;
-        [self.navigationController pushViewController:v animated:YES];
-    }
+    self.avancarPag.hidden = NO;
 }
 @end

@@ -38,7 +38,6 @@
         for (int i = self.rodada; i <= [self.jogadores count]; i++ ) {
             BEPJogador * jogadorAux = self.jogadores[i-1];
             int aux = jogadorAux.palitoMao + arc4random() %(maxMesa - jogadorAux.palitoMao);
-            NSLog(@"%d",i);
             //Valida adivinhações repetidas
             while ([self validaAposta:self.jogadores valor:aux] == false) {
                aux = jogadorAux.palitoMao + arc4random() %(maxMesa - jogadorAux.palitoMao);
@@ -66,7 +65,7 @@
     [self preencheLabel:[NSString stringWithFormat:@"%d",self.valorMaxRec] label:self.ValorMax];
     self.jogador.aposta =[[self.jogadores objectAtIndex:0]palitoMao];
     [self preencheLabel:[NSString stringWithFormat:@"%d",[[self.jogadores objectAtIndex:0]palitoMao]] label:self.Aposta];
-    
+    self.avancarPag.hidden = YES;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -74,6 +73,14 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)avancar:(id)sender {
+    BEPViewApresentaResulSP *viewResul = [[BEPViewApresentaResulSP alloc] init];
+    viewResul.rodada = self.rodada;
+    viewResul.jogadores = self.jogadores;    
+    self.navigationController.navigationBar.hidden = YES;
+    [self.navigationController pushViewController:viewResul animated:YES];
 }
 
 - (IBAction)IncrementaAposta:(id)sender {
@@ -136,22 +143,17 @@
         jogadorAux.aposta =aux;
         //Apresenta as adivinhações em seus campos especificos
         [self preencheLabel:[NSString stringWithFormat:@"%d",jogadorAux.aposta] label:[self.labels objectAtIndex:i-2]];
-        [NSThread sleepForTimeInterval:1];
     }
 }
 
-- (void)VerResultado:(id)sender {
-    NSLog(@"Botáo pressionado !");
+- (IBAction)VerResultado:(id)sender {
+   
     //define adivinhações das maquinas apos a aposta do usuario
-    [self terminaPreenchimento:self.labels];
     if ([self validaAposta:self.jogadores valor:self.jogador.aposta]) {
+        [self terminaPreenchimento:self.labels];
         BEPJogador *jog = self.jogadores[0];
         jog.aposta = self.jogador.aposta;
-        BEPViewApresentaResulSP *viewResul = [[BEPViewApresentaResulSP alloc] init];
-        viewResul.rodada = self.rodada;
-        viewResul.jogadores = self.jogadores;
-        [self.navigationController pushViewController:viewResul animated:YES];
-        
+        self.avancarPag.hidden = NO;
     }
     
 }
