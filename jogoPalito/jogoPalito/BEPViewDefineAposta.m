@@ -10,9 +10,7 @@
 #import "BEPViewApresentaResulSP.h"
 
 @interface BEPViewDefineAposta ()
-@property (weak, nonatomic) IBOutlet UILabel *player1;
-@property (weak, nonatomic) IBOutlet UILabel *player2;
-@property (weak, nonatomic) IBOutlet UILabel *player3;
+
 
 @end
 
@@ -143,6 +141,7 @@
 }
 
 - (void)VerResultado:(id)sender {
+    NSLog(@"Botáo pressionado !");
     //define adivinhações das maquinas apos a aposta do usuario
     [self terminaPreenchimento:self.labels];
     if ([self validaAposta:self.jogadores valor:self.jogador.aposta]) {
@@ -152,6 +151,7 @@
         viewResul.rodada = self.rodada;
         viewResul.jogadores = self.jogadores;
         [self.navigationController pushViewController:viewResul animated:YES];
+        
     }
     
 }

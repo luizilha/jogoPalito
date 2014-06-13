@@ -13,6 +13,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *ValorMin;
 @property (weak, nonatomic) IBOutlet UILabel *Aposta;
 @property (weak, nonatomic) IBOutlet UILabel *ValorMax;
+@property (weak, nonatomic) IBOutlet UILabel *player1;
+@property (weak, nonatomic) IBOutlet UILabel *player2;
+@property (weak, nonatomic) IBOutlet UILabel *player3;
 
 @property(nonatomic) NSMutableArray *jogadores;
 @property(nonatomic) BEPJogador *jogador;

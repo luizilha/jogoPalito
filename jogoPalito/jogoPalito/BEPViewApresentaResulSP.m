@@ -27,6 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"Carregou a view !");
     int resul;
     int vencedorAux;
     [self preencheLabel:self.qtdPalitosPlayer aposta:self.apostaPlayer jogador:self.jogadores[0]];
