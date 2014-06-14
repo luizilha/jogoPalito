@@ -13,6 +13,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *ValorMin;
 @property (weak, nonatomic) IBOutlet UILabel *Aposta;
 @property (weak, nonatomic) IBOutlet UILabel *ValorMax;
+@property (weak, nonatomic) IBOutlet UILabel *player1;
+@property (weak, nonatomic) IBOutlet UILabel *player2;
+@property (weak, nonatomic) IBOutlet UILabel *player3;
+@property (weak, nonatomic) IBOutlet UIButton *avancarPag;
 
 @property(nonatomic) NSMutableArray *jogadores;
 @property(nonatomic) BEPJogador *jogador;
@@ -21,6 +25,7 @@
 @property(nonatomic) int rodada;
 @property(nonatomic) NSMutableArray *labels;
 
+- (IBAction)avancar:(id)sender;
 - (IBAction)IncrementaAposta:(id)sender;
 - (IBAction)descrementaAposta:(id)sender;
 - (IBAction)VerResultado:(id)sender;

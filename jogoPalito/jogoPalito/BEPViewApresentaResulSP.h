@@ -22,14 +22,16 @@
 @property (weak, nonatomic) IBOutlet UILabel *qtdPalitosA1;
 @property (weak, nonatomic) IBOutlet UILabel *qtdPalitosA2;
 @property (weak, nonatomic) IBOutlet UILabel *qtdPalitosA3;
+@property (weak, nonatomic) IBOutlet UIButton *avancarPag;
 
 @property (nonatomic) NSMutableArray *jogadores;
 @property (nonatomic) int rodada;
+- (IBAction)avancar:(id)sender;
 
 - (IBAction)botaoOk:(id)sender;
 - (void) preencheLabel:(UILabel *)palitos aposta:(UILabel *)aposta jogador:(BEPJogador *) jogador;
 - (int) revelaResultado:(UILabel *)resultado jogadores:(NSMutableArray *) jogadores;
 - (int) revelaVencedor:(UILabel *)vencedor and:(NSMutableArray *) jogadores and:(int) resultado;
-- (void) subtraiVencedor:(UILabel *)palitos and:(UILabel *) aposta and:(int) qtdPalitos;
+- (void) subtraiVencedor:(UILabel *)palitos and:(UILabel *) aposta and:(BEPJogador*)jogador;
 
 @end

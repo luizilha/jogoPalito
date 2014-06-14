@@ -82,6 +82,7 @@
         BEPJogador *jogador = self.jogadores[i];
         jogador.palitoMao = arc4random() %jogador.max;
     }
+    self.navigationController.navigationBar.hidden = YES;
     [self.navigationController pushViewController:viewDefineAposta animated:YES];
 }
 
