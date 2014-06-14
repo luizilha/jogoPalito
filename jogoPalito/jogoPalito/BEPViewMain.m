@@ -10,6 +10,7 @@
 #import "BEPPalitosMaoViewController.h"
 #import "BEPJogador.h"
 #import "BEPViewDefineQtdJogadores.h"
+#import "BEPAppDelegate.h"
 @interface BEPViewMain ()
 
 @end
@@ -38,6 +39,7 @@
 }
 
 - (IBAction)botaoSinglePlayer:(id)sender {
+    
     BEPPalitosMaoViewController *v = [[BEPPalitosMaoViewController alloc] init];
     NSMutableArray *jogadores= [[NSMutableArray alloc]init];
     for(int i = 0; i < 4; i++){

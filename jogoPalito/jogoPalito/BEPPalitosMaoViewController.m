@@ -8,6 +8,7 @@
 
 #import "BEPPalitosMaoViewController.h"
 #import "BEPViewDefineAposta.h"
+#import "BEPAppDelegate.h"
 
 @interface BEPPalitosMaoViewController ()
 
@@ -84,6 +85,7 @@
     }
     self.navigationController.navigationBar.hidden = YES;
     [self.navigationController pushViewController:viewDefineAposta animated:YES];
+    
 }
 
 

@@ -38,13 +38,13 @@
         for (int i = self.rodada; i <= [self.jogadores count]; i++ ) {
             BEPJogador * jogadorAux = self.jogadores[i-1];
             int aux = jogadorAux.palitoMao + arc4random() %(maxMesa - jogadorAux.palitoMao);
-            //Valida adivinhações repetidas
+            // Valida adivinhações repetidas
             while ([self validaAposta:self.jogadores valor:aux] == false) {
                aux = jogadorAux.palitoMao + arc4random() %(maxMesa - jogadorAux.palitoMao);
             }
             jogadorAux.aposta =aux;
             
-            //Posiciona adivinhações em seus locais especificos
+            // Posiciona adivinhações em seus locais especificos
             switch (i) {
                 case 2:
                     [self preencheLabel:[NSString stringWithFormat:@"%d",jogadorAux.aposta] label:[self.labels objectAtIndex:0]];
@@ -130,7 +130,8 @@
     return true;
 }
 
--(void)terminaPreenchimento:labels{
+-(void)terminaPreenchimento:labels
+{
     int maxMesa = [self defineMaxMesa:self.jogadores];
     for (int i = 2; i <= (5-self.rodada); i++ ) {
         BEPJogador * jogadorAux = self.jogadores[i-1];
@@ -140,7 +141,7 @@
         while ([self validaAposta:self.jogadores valor:aux] == false) {
             aux = jogadorAux.palitoMao + arc4random() %(maxMesa - jogadorAux.palitoMao);
         }
-        jogadorAux.aposta =aux;
+        jogadorAux.aposta = aux;
         //Apresenta as adivinhações em seus campos especificos
         [self preencheLabel:[NSString stringWithFormat:@"%d",jogadorAux.aposta] label:[self.labels objectAtIndex:i-2]];
     }
