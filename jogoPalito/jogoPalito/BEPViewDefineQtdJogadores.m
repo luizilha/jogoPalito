@@ -7,7 +7,7 @@
 //
 
 #import "BEPViewDefineQtdJogadores.h"
-
+#import "BEPAppDelegate.h"
 
 @interface BEPViewDefineQtdJogadores ()
 
@@ -24,7 +24,6 @@
     return self;
 }
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -39,15 +38,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)incrementador:(id)sender {
+- (IBAction)incrementador:(id)sender
+{
     if (self.numJogadores < 4) {
         self.numJogadores++;
         self.labelNumeroJogadores.text = [NSString stringWithFormat:@"%d",self.numJogadores];
     }
-    
 }
 
-- (IBAction)descrementador:(id)sender {
+- (IBAction)descrementador:(id)sender
+{
     if (self.numJogadores > 2) {
         self.numJogadores--;
         self.labelNumeroJogadores.text = [NSString stringWithFormat:@"%d",self.numJogadores];
@@ -55,16 +55,17 @@
 
 }
 
-
-- (IBAction)iniciarJogo:(id)sender {
+- (IBAction)iniciarJogo:(id)sender
+{
     BEPPalitosMaoViewController *v = [[BEPPalitosMaoViewController alloc] init];
     int qtde = self.labelNumeroJogadores.text.intValue;
-    //v.jogadores = [[NSMutableArray alloc] initWithCapacity:BEPJogador.Byte * 5];
     v.jogadores = [[NSMutableArray alloc]init];
     for (int i =0; i < qtde ; i++) {
         BEPJogador *jogador = [[BEPJogador alloc] init];
         [v.jogadores addObject:jogador];
     }
+    [[v.jogadores objectAtIndex:0] setMax:3];
+    [v setModoSingle:NO];
     [self.navigationController pushViewController:v animated:YES];
     
     
