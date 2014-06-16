@@ -20,7 +20,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.rodada = 0;
     }
     return self;
 }
@@ -75,16 +75,28 @@
 
 - (IBAction)confirmaEscolha:(id)sender
 {
-    BEPViewDefineAposta *viewDefineAposta = [[BEPViewDefineAposta alloc]init];
-    self.jogador.palitoMao = self.incrementador;
-    viewDefineAposta.jogadores = self.jogadores;
-    viewDefineAposta.rodada = self.rodada;
-    for (int i = 1; i < [self.jogadores count]; i++) {
-        BEPJogador *jogador = self.jogadores[i];
-        jogador.palitoMao = arc4random() %jogador.max;
+    if (self.modoSingle) {
+        BEPViewDefineAposta *viewDefineAposta = [[BEPViewDefineAposta alloc]init];
+        self.jogador.palitoMao = self.incrementador;
+        viewDefineAposta.jogadores = self.jogadores;
+        viewDefineAposta.rodada = self.rodada;
+        for (int i = 1; i < [self.jogadores count]; i++) {
+            BEPJogador *jogador = self.jogadores[i];
+            jogador.palitoMao = arc4random() %jogador.max;
+        }
+        self.navigationController.navigationBar.hidden = YES;
+        [self.navigationController pushViewController:viewDefineAposta animated:YES];
+    } else if (self.rodada < self.jogadores.count-1) {
+        self.jogador.palitoMao = self.incrementador;
+        [self.jogadores setObject:self.jogador atIndexedSubscript:self.rodada];
+        NSLog(@"QTDE JOGADORES: %d, RODADA: %d", self.jogadores.count,self.rodada);
+        self.title = [NSString stringWithFormat:@"jogador %d", self.rodada+2];
+        //[self.navigationController.navigationBar setBackgroundColor:];
+        self.rodada++;
+
     }
-    self.navigationController.navigationBar.hidden = YES;
-    [self.navigationController pushViewController:viewDefineAposta animated:YES];
+
+
     
 }
 

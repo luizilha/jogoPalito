@@ -44,7 +44,6 @@
         self.numJogadores++;
         self.labelNumeroJogadores.text = [NSString stringWithFormat:@"%d",self.numJogadores];
     }
-    
 }
 
 - (IBAction)descrementador:(id)sender
@@ -66,6 +65,7 @@
         [v.jogadores addObject:jogador];
     }
     [[v.jogadores objectAtIndex:0] setMax:3];
+    [v setModoSingle:NO];
     [self.navigationController pushViewController:v animated:YES];
     
     

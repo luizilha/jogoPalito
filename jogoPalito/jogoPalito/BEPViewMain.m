@@ -49,6 +49,7 @@
     }
     v.rodada = 1;
     v.jogadores = jogadores;
+    [v setModoSingle:YES];
     [self.navigationController pushViewController:v animated:YES];
 }
 
