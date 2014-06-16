@@ -154,6 +154,11 @@
         BEPJogador *jog = self.jogadores[0];
         jog.aposta = self.jogador.aposta;
         self.avancarPag.hidden = NO;
+        self.incrementaAposta.hidden = YES;
+        self.descrementaAposta.hidden = YES;
+        self.alerta.text = [NSString stringWithFormat:@""];
+    }else{
+        self.alerta.text = [NSString stringWithFormat:@"Valor já escolhido"];
     }
     
 }

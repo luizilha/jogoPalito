@@ -17,6 +17,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *player2;
 @property (weak, nonatomic) IBOutlet UILabel *player3;
 @property (weak, nonatomic) IBOutlet UIButton *avancarPag;
+@property (weak, nonatomic) IBOutlet UILabel *alerta;
+@property (weak, nonatomic) IBOutlet UIButton *incrementaAposta;
+@property (weak, nonatomic) IBOutlet UIButton *descrementaAposta;
 
 @property(nonatomic) NSMutableArray *jogadores;
 @property(nonatomic) BEPJogador *jogador;

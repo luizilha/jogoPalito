@@ -9,7 +9,10 @@
                 <outlet property="Aposta" destination="Lrt-Ss-D2A" id="8Y5-jR-Flk"/>
                 <outlet property="ValorMax" destination="GxN-ei-vH1" id="MEB-HC-sKh"/>
                 <outlet property="ValorMin" destination="2wn-nO-y6u" id="AKm-zn-L2o"/>
+                <outlet property="alerta" destination="gDh-iD-nVY" id="lFC-vQ-eKH"/>
                 <outlet property="avancarPag" destination="qwl-zL-bbh" id="Bvk-QY-6eh"/>
+                <outlet property="descrementaAposta" destination="QDV-Ly-L86" id="cWN-Mx-VWz"/>
+                <outlet property="incrementaAposta" destination="RxK-GX-qJx" id="IHd-Mf-DxQ"/>
                 <outlet property="player1" destination="S1D-uK-noa" id="UPl-m2-lo7"/>
                 <outlet property="player2" destination="2KU-R9-VhC" id="Uq5-tu-RtD"/>
                 <outlet property="player3" destination="n9E-ap-w4F" id="WsI-Kw-ge3"/>
@@ -100,6 +103,13 @@
                         <action selector="avancar:" destination="-1" eventType="touchUpInside" id="Yue-7s-1h6"/>
                     </connections>
                 </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDh-iD-nVY">
+                    <rect key="frame" x="43" y="467" width="245" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="0.078334701970000004" blue="0.048669347119999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
