@@ -9,6 +9,7 @@
 #import "BEPPalitosMaoViewController.h"
 #import "BEPViewDefineAposta.h"
 #import "BEPAppDelegate.h"
+#import "BEPApostaMultiViewController.h"
 
 @interface BEPPalitosMaoViewController ()
 
@@ -75,6 +76,7 @@
 
 - (IBAction)confirmaEscolha:(id)sender
 {
+    NSLog(@"QTDE JOGADORES: %d, RODADA: %d",(int) self.jogadores.count,self.rodada);
     if (self.modoSingle) {
         BEPViewDefineAposta *viewDefineAposta = [[BEPViewDefineAposta alloc]init];
         self.jogador.palitoMao = self.incrementador;
@@ -86,18 +88,29 @@
         }
         self.navigationController.navigationBar.hidden = YES;
         [self.navigationController pushViewController:viewDefineAposta animated:YES];
-    } else if (self.rodada < self.jogadores.count-1) {
+    } else if (self.rodada < self.jogadores.count) {
+        self.title = [NSString stringWithFormat:@"jogador %d", self.rodada+2];
+        switch (self.rodada) {
+            case 0:
+                [self.navigationController.navigationBar setBackgroundColor: [UIColor redColor]];
+                break;
+            case 1:
+                [self.navigationController.navigationBar setBackgroundColor: [UIColor blueColor]];
+                break;
+            case 2:
+                [self.navigationController.navigationBar setBackgroundColor: [UIColor orangeColor]];
+                break;
+            case 4:
+                [self.navigationController.navigationBar setBackgroundColor: [UIColor greenColor]];
+        }
         self.jogador.palitoMao = self.incrementador;
         [self.jogadores setObject:self.jogador atIndexedSubscript:self.rodada];
-        NSLog(@"QTDE JOGADORES: %d, RODADA: %d", self.jogadores.count,self.rodada);
-        self.title = [NSString stringWithFormat:@"jogador %d", self.rodada+2];
-        //[self.navigationController.navigationBar setBackgroundColor:];
         self.rodada++;
-
     }
-
-
-    
+    if (self.jogadores.count == self.rodada) {
+        BEPApostaMultiViewController *v = [[BEPApostaMultiViewController alloc] init];
+        [self.navigationController pushViewController:v animated: YES];
+    }
 }
 
 
