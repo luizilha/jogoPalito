@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7225E217194F741C0068DF4C /* BEPApostaMultiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7225E215194F741C0068DF4C /* BEPApostaMultiViewController.m */; };
+		7225E218194F741C0068DF4C /* BEPApostaMultiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7225E216194F741C0068DF4C /* BEPApostaMultiViewController.xib */; };
 		725766731933D08600879646 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 725766721933D08600879646 /* Foundation.framework */; };
 		725766751933D08600879646 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 725766741933D08600879646 /* CoreGraphics.framework */; };
 		725766771933D08600879646 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 725766761933D08600879646 /* UIKit.framework */; };
@@ -43,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7225E214194F741C0068DF4C /* BEPApostaMultiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEPApostaMultiViewController.h; sourceTree = "<group>"; };
+		7225E215194F741C0068DF4C /* BEPApostaMultiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEPApostaMultiViewController.m; sourceTree = "<group>"; };
+		7225E216194F741C0068DF4C /* BEPApostaMultiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BEPApostaMultiViewController.xib; sourceTree = "<group>"; };
 		7257666F1933D08600879646 /* jogoPalito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jogoPalito.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		725766721933D08600879646 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		725766741933D08600879646 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -140,6 +145,9 @@
 				8837824D1933D8A7003C183D /* BEPPalitosMaoViewController.h */,
 				8837824E1933D8A7003C183D /* BEPPalitosMaoViewController.m */,
 				8837824F1933D8A7003C183D /* BEPPalitosMaoViewController.xib */,
+				7225E214194F741C0068DF4C /* BEPApostaMultiViewController.h */,
+				7225E215194F741C0068DF4C /* BEPApostaMultiViewController.m */,
+				7225E216194F741C0068DF4C /* BEPApostaMultiViewController.xib */,
 				72B129F019367F6700EB6574 /* BEPJogador.h */,
 				72B129F119367F6700EB6574 /* BEPJogador.m */,
 				88855BA11937B9E900B6850E /* BEPViewDefineQtdJogadores.h */,
@@ -272,6 +280,7 @@
 				88BCFEA3193FAEBF00F72C26 /* BEPViewDefineAposta.xib in Resources */,
 				88BCFE9E193F9F6E00F72C26 /* BEPViewMain.xib in Resources */,
 				725766851933D08600879646 /* Images.xcassets in Resources */,
+				7225E218194F741C0068DF4C /* BEPApostaMultiViewController.xib in Resources */,
 				883782511933D8A7003C183D /* BEPPalitosMaoViewController.xib in Resources */,
 				88855BA51937B9E900B6850E /* BEPViewDefineQtdJogadores.xib in Resources */,
 				88D1E8CF1940D5F500E4809A /* BEPViewApresentaResulSP.xib in Resources */,
@@ -300,6 +309,7 @@
 				725766831933D08600879646 /* BEPAppDelegate.m in Sources */,
 				7257667F1933D08600879646 /* main.m in Sources */,
 				883782501933D8A7003C183D /* BEPPalitosMaoViewController.m in Sources */,
+				7225E217194F741C0068DF4C /* BEPApostaMultiViewController.m in Sources */,
 				88D1E8CE1940D5F500E4809A /* BEPViewApresentaResulSP.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
