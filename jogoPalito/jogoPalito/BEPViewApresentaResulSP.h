@@ -23,15 +23,20 @@
 @property (weak, nonatomic) IBOutlet UILabel *qtdPalitosA2;
 @property (weak, nonatomic) IBOutlet UILabel *qtdPalitosA3;
 @property (weak, nonatomic) IBOutlet UIButton *avancarPag;
+@property (weak, nonatomic) IBOutlet UILabel *msgVencedor;
+@property (weak, nonatomic) IBOutlet UIButton *terminaJogo;
+
 
 @property (nonatomic) NSMutableArray *jogadores;
 @property (nonatomic) int rodada;
-- (IBAction)avancar:(id)sender;
+@property (nonatomic) BOOL singlePlayer;
 
+- (IBAction)terminaJogo:(id)sender;
+- (IBAction)avancar:(id)sender;
 - (IBAction)botaoOk:(id)sender;
 - (void) preencheLabel:(UILabel *)palitos aposta:(UILabel *)aposta jogador:(BEPJogador *) jogador;
 - (int) revelaResultado:(UILabel *)resultado jogadores:(NSMutableArray *) jogadores;
 - (int) revelaVencedor:(UILabel *)vencedor and:(NSMutableArray *) jogadores and:(int) resultado;
 - (void) subtraiVencedor:(UILabel *)palitos and:(UILabel *) aposta and:(BEPJogador*)jogador;
-
+- (void) apresentaMensagem:(NSMutableArray *)nsJogadores :(UILabel *)msg;
 @end

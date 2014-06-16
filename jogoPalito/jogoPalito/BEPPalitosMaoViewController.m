@@ -89,7 +89,6 @@
     } else if (self.rodada < self.jogadores.count-1) {
         self.jogador.palitoMao = self.incrementador;
         [self.jogadores setObject:self.jogador atIndexedSubscript:self.rodada];
-        NSLog(@"QTDE JOGADORES: %d, RODADA: %d", self.jogadores.count,self.rodada);
         self.title = [NSString stringWithFormat:@"jogador %d", self.rodada+2];
         //[self.navigationController.navigationBar setBackgroundColor:];
         self.rodada++;

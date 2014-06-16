@@ -101,20 +101,12 @@
 -(int)defineMaxMesa:(NSMutableArray *)jogadores{
     int soma = 0;
     for(int i = 0; i < 4; i++){
-        BEPJogador * jogador = jogadores[0];
+        BEPJogador * jogador = jogadores[i];
         soma += jogador.max;
     }
     return soma;
 }
 
--(int)defineMinMesa:(NSMutableArray *)jogadores{
-    int soma = 0;
-    for(int i = 0; i < 4; i++){
-        BEPJogador * jogador = jogadores[0];
-        soma += jogador.palitoMao;
-    }
-    return soma - 6;
-}
 
 -(void)preencheLabel:(NSString *)texto label:(UILabel *)label{
     label.text = texto;
@@ -133,17 +125,30 @@
 -(void)terminaPreenchimento:labels
 {
     int maxMesa = [self defineMaxMesa:self.jogadores];
-    for (int i = 2; i <= (5-self.rodada); i++ ) {
-        BEPJogador * jogadorAux = self.jogadores[i-1];
-        int aux = jogadorAux.palitoMao + arc4random() %(maxMesa - jogadorAux.palitoMao);
-        
-        //Valida adivinhações repetidas
-        while ([self validaAposta:self.jogadores valor:aux] == false) {
-            aux = jogadorAux.palitoMao + arc4random() %(maxMesa - jogadorAux.palitoMao);
+    if(self.rodada != 1){
+        for (int i = 1; i < self.rodada - 1; i++ ) {
+            BEPJogador * jogadorAux = self.jogadores[i];
+            int aux = jogadorAux.palitoMao + arc4random() %(maxMesa - jogadorAux.palitoMao);
+            //Valida adivinhações repetidas
+            while ([self validaAposta:self.jogadores valor:aux] == false) {
+                aux = jogadorAux.palitoMao + arc4random() %(maxMesa - jogadorAux.palitoMao);
+            }
+            jogadorAux.aposta = aux;
+            //Apresenta as adivinhações em seus campos especificos
+            [self preencheLabel:[NSString stringWithFormat:@"%d",jogadorAux.aposta] label:[self.labels objectAtIndex:i-1]];
         }
-        jogadorAux.aposta = aux;
-        //Apresenta as adivinhações em seus campos especificos
-        [self preencheLabel:[NSString stringWithFormat:@"%d",jogadorAux.aposta] label:[self.labels objectAtIndex:i-2]];
+    }else{
+        for (int i = 1; i < 4; i++ ) {
+            BEPJogador * jogadorAux = self.jogadores[i];
+            int aux = jogadorAux.palitoMao + arc4random() %(maxMesa - jogadorAux.palitoMao);
+            //Valida adivinhações repetidas
+            while ([self validaAposta:self.jogadores valor:aux] == false) {
+                aux = jogadorAux.palitoMao + arc4random() %(maxMesa - jogadorAux.palitoMao);
+            }
+            jogadorAux.aposta = aux;
+            //Apresenta as adivinhações em seus campos especificos
+            [self preencheLabel:[NSString stringWithFormat:@"%d",jogadorAux.aposta] label:[self.labels objectAtIndex:i-1]];
+        }
     }
 }
 

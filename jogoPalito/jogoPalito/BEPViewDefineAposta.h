@@ -28,12 +28,12 @@
 @property(nonatomic) int rodada;
 @property(nonatomic) NSMutableArray *labels;
 
+
 - (IBAction)avancar:(id)sender;
 - (IBAction)IncrementaAposta:(id)sender;
 - (IBAction)descrementaAposta:(id)sender;
 - (IBAction)VerResultado:(id)sender;
 - (int)defineMaxMesa:(NSMutableArray*)jogadores;
--(int)defineMinMesa:(NSMutableArray*)jogadores;
 -(void)preencheLabel:(NSString*)texto label:(UILabel*)label;
 -(BOOL)validaAposta:(NSMutableArray*)jogadores valor:(int) valor;
 -(void)terminaPreenchimento:(NSMutableArray*)labels;

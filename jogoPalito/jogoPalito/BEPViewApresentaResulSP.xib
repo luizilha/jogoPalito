@@ -11,11 +11,13 @@
                 <outlet property="apostaA3" destination="BKY-Ic-JqR" id="7uN-bn-aUw"/>
                 <outlet property="apostaPlayer" destination="whW-1o-R3c" id="KTF-18-ukU"/>
                 <outlet property="avancarPag" destination="c44-up-CG0" id="xPG-mK-c5n"/>
+                <outlet property="msgVencedor" destination="OWZ-b0-Xmx" id="Ngd-Bt-utV"/>
                 <outlet property="qtdPalitosA1" destination="X9p-Ul-boK" id="v2X-23-vGC"/>
                 <outlet property="qtdPalitosA2" destination="4iq-8k-NtV" id="1bO-aM-01i"/>
                 <outlet property="qtdPalitosA3" destination="k1S-L9-Jcv" id="ZPG-sD-o1i"/>
                 <outlet property="qtdPalitosPlayer" destination="Aw0-8x-dgm" id="oQV-7m-5ND"/>
                 <outlet property="resultado" destination="b0q-N1-Ok4" id="I9V-v8-M4P"/>
+                <outlet property="terminaJogo" destination="nbx-vb-IE3" id="ed2-eN-xzo"/>
                 <outlet property="vencedor" destination="zWm-5N-LQz" id="H5i-lL-4Lx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -103,6 +105,23 @@
                     </state>
                     <connections>
                         <action selector="avancar:" destination="-1" eventType="touchUpInside" id="oa0-CG-Lgv"/>
+                    </connections>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWZ-b0-Xmx">
+                    <rect key="frame" x="20" y="453" width="280" height="26"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.1762661646" green="1" blue="0.13996095049999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbx-vb-IE3">
+                    <rect key="frame" x="100" y="497" width="115" height="41"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="terminaJogo:" destination="-1" eventType="touchUpInside" id="XlC-cM-vy0"/>
                     </connections>
                 </button>
             </subviews>
