@@ -12,13 +12,17 @@
 @interface BEPApostaMultiViewController : UIViewController
 
 @property (nonatomic) NSMutableArray *jogadores;
-@property (nonatomic) int *rodada;
+@property (nonatomic) int rodada;
+@property (nonatomic) NSString *qtdJogadores;
+@property (nonatomic) NSString *chuteJogadores;
 
+@property (weak, nonatomic) IBOutlet UILabel *lblTitulo;
 @property (weak, nonatomic) IBOutlet UILabel *lblQtdeJogadores;
 @property (weak, nonatomic) IBOutlet UILabel *lblPontuacaoJogadores;
 @property (weak, nonatomic) IBOutlet UIStepper *imprementador;
 @property (weak, nonatomic) IBOutlet UILabel *lblValorAposta;
 
 - (IBAction)aposta:(id)sender;
+- (IBAction)chute:(id)sender;
 
 @end

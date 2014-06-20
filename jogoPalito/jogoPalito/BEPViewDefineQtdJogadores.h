@@ -18,5 +18,4 @@
 - (IBAction)descrementador:(id)sender;
 - (IBAction)iniciarJogo:(id)sender;
 
-
 @end

@@ -48,7 +48,7 @@
 
 - (IBAction)palitoMao:(id)sender
 {
-    if(self.incrementador < self.jogador.max) {
+    if(self.incrementador < [self.jogadores[self.rodada] max]) {
         UIView *view = [self.viewPalitoFora.subviews objectAtIndex:self.viewPalitoFora.subviews.count-1];
         [view removeFromSuperview];
         [self.viewPalitoMao addSubview:[self novoPalito:(80 * self.incrementador)]];
@@ -60,11 +60,10 @@
 {
     [super viewDidLoad];
     self.incrementador = 0;
-    self.jogador = self.jogadores[0];
-    for (int i = 0; i < self.jogador.max; i++) {
+    for (int i = 0; i < [self.jogadores[self.rodada] max]; i++) {
         [self.viewPalitoFora addSubview:[self novoPalito:(80 * i)]];
     }
-    self.title = @"Jogador 1";
+    self.title = [NSString stringWithFormat:@"Jogador %d", self.rodada+1];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -76,7 +75,6 @@
 
 - (IBAction)confirmaEscolha:(id)sender
 {
-    NSLog(@"QTDE JOGADORES: %d, RODADA: %d",(int) self.jogadores.count,self.rodada);
     if (self.modoSingle) {
         BEPViewDefineAposta *viewDefineAposta = [[BEPViewDefineAposta alloc]init];
         self.jogador.palitoMao = self.incrementador;
@@ -86,32 +84,28 @@
             BEPJogador *jogador = self.jogadores[i];
             jogador.palitoMao = arc4random() %jogador.max;
         }
-        self.navigationController.navigationBar.hidden = YES;
         [self.navigationController pushViewController:viewDefineAposta animated:YES];
     } else if (self.rodada < self.jogadores.count) {
-        self.title = [NSString stringWithFormat:@"jogador %d", self.rodada+2];
-        switch (self.rodada) {
-            case 0:
-                [self.navigationController.navigationBar setBackgroundColor: [UIColor redColor]];
-                break;
-            case 1:
-                [self.navigationController.navigationBar setBackgroundColor: [UIColor blueColor]];
-                break;
-            case 2:
-                [self.navigationController.navigationBar setBackgroundColor: [UIColor orangeColor]];
-                break;
-            case 4:
-                [self.navigationController.navigationBar setBackgroundColor: [UIColor greenColor]];
+        [self.jogadores[self.rodada] setPalitoMao:self.incrementador];
+        if (self.rodada+1 == self.jogadores.count) {
+            BEPApostaMultiViewController *v = [[BEPApostaMultiViewController alloc] init];
+            v.jogadores = self.jogadores;
+            NSMutableString *temp = [[NSMutableString alloc] init];
+            NSMutableString *temp2 = [[NSMutableString alloc] init];
+            for (int i = 1; i < self.jogadores.count+1; i++) {
+                [temp appendString:[NSString stringWithFormat:@"%7d",i]];
+                [temp2 appendString:[NSString stringWithFormat:@"%7s","X"]];
+            }
+            v.qtdJogadores = temp;
+            v.chuteJogadores = temp2;
+            v.rodada = 0;
+            [self.navigationController pushViewController:v animated: YES];
+        } else {
+            BEPPalitosMaoViewController *novo = [[BEPPalitosMaoViewController alloc] init];
+            novo.jogadores = self.jogadores;
+            novo.rodada = self.rodada+1;
+            [self.navigationController pushViewController:novo animated:YES];
         }
-        self.jogador.palitoMao = self.incrementador;
-        [self.jogadores setObject:self.jogador atIndexedSubscript:self.rodada];
-        self.title = [NSString stringWithFormat:@"jogador %d", self.rodada+2];
-        //[self.navigationController.navigationBar setBackgroundColor:];
-        self.rodada++;
-    }
-    if (self.jogadores.count == self.rodada) {
-        BEPApostaMultiViewController *v = [[BEPApostaMultiViewController alloc] init];
-        [self.navigationController pushViewController:v animated: YES];
     }
 }
 

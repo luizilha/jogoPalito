@@ -52,7 +52,6 @@
         self.numJogadores--;
         self.labelNumeroJogadores.text = [NSString stringWithFormat:@"%d",self.numJogadores];
     }
-
 }
 
 - (IBAction)iniciarJogo:(id)sender
@@ -64,10 +63,11 @@
         BEPJogador *jogador = [[BEPJogador alloc] init];
         [v.jogadores addObject:jogador];
     }
-    [[v.jogadores objectAtIndex:0] setMax:3];
+    for (int i =0; i < qtde ; i++) {
+        [[v.jogadores objectAtIndex:i] setMax:3];
+    }
     [v setModoSingle:NO];
     [self.navigationController pushViewController:v animated:YES];
-    
     
 }
 @end
