@@ -11,6 +11,7 @@
 		721D3B7B1954350200331B27 /* BEPResultadoMultiVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 721D3B791954350200331B27 /* BEPResultadoMultiVC.xib */; };
 		7225E217194F741C0068DF4C /* BEPApostaMultiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7225E215194F741C0068DF4C /* BEPApostaMultiViewController.m */; };
 		7225E218194F741C0068DF4C /* BEPApostaMultiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7225E216194F741C0068DF4C /* BEPApostaMultiViewController.xib */; };
+		72483850195C7ED800504A2D /* BEPPalitosMaoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8837824F1933D8A7003C183D /* BEPPalitosMaoViewController.xib */; };
 		725766731933D08600879646 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 725766721933D08600879646 /* Foundation.framework */; };
 		725766751933D08600879646 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 725766741933D08600879646 /* CoreGraphics.framework */; };
 		725766771933D08600879646 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 725766761933D08600879646 /* UIKit.framework */; };
@@ -25,7 +26,6 @@
 		725766981933D08700879646 /* jogoPalitoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 725766971933D08700879646 /* jogoPalitoTests.m */; };
 		72B129F219367F6700EB6574 /* BEPJogador.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B129F119367F6700EB6574 /* BEPJogador.m */; };
 		883782501933D8A7003C183D /* BEPPalitosMaoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8837824E1933D8A7003C183D /* BEPPalitosMaoViewController.m */; };
-		883782511933D8A7003C183D /* BEPPalitosMaoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8837824F1933D8A7003C183D /* BEPPalitosMaoViewController.xib */; };
 		88855BA41937B9E900B6850E /* BEPViewDefineQtdJogadores.m in Sources */ = {isa = PBXBuildFile; fileRef = 88855BA21937B9E900B6850E /* BEPViewDefineQtdJogadores.m */; };
 		88855BA51937B9E900B6850E /* BEPViewDefineQtdJogadores.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88855BA31937B9E900B6850E /* BEPViewDefineQtdJogadores.xib */; };
 		88BCFE9D193F9F6E00F72C26 /* BEPViewMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 88BCFE9B193F9F6E00F72C26 /* BEPViewMain.m */; };
@@ -322,7 +322,7 @@
 				721D3B7B1954350200331B27 /* BEPResultadoMultiVC.xib in Resources */,
 				725766851933D08600879646 /* Images.xcassets in Resources */,
 				7225E218194F741C0068DF4C /* BEPApostaMultiViewController.xib in Resources */,
-				883782511933D8A7003C183D /* BEPPalitosMaoViewController.xib in Resources */,
+				72483850195C7ED800504A2D /* BEPPalitosMaoViewController.xib in Resources */,
 				88855BA51937B9E900B6850E /* BEPViewDefineQtdJogadores.xib in Resources */,
 				88D1E8CF1940D5F500E4809A /* BEPViewApresentaResulSP.xib in Resources */,
 			);
