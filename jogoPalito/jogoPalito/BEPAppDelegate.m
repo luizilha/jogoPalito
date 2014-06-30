@@ -18,6 +18,7 @@
     // Override point for customization after application launch.
     BEPViewMain *main = [[BEPViewMain alloc] init];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:main];
+    nav.navigationBar.hidden = YES;
     self.window.rootViewController = nav;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

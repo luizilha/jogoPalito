@@ -67,8 +67,8 @@
 - (IBAction)proximaRodada:(id)sender
 {
     if (self.acabou) {
-        BEPViewMain *main = [[BEPViewMain alloc] init];
-        [self.navigationController pushViewController:main animated:YES];
+        [self.navigationController popToRootViewControllerAnimated:YES];
+        return;
     }
     BEPPalitosMaoViewController *palitos = [[BEPPalitosMaoViewController alloc] init];
     palitos.jogadores = self.jogadores;

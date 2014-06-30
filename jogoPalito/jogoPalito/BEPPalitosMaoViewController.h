@@ -13,6 +13,8 @@
 
 @property (weak, nonatomic) IBOutlet UIView *viewPalitoFora;
 @property (weak, nonatomic) IBOutlet UIView *viewPalitoMao;
+@property (weak, nonatomic) IBOutlet UIButton *btnMais;
+@property (weak, nonatomic) IBOutlet UIButton *btnMenos;
 
 @property (nonatomic) int incrementador;
 @property (nonatomic) NSMutableArray *jogadores;
@@ -20,10 +22,11 @@
 @property (nonatomic) int rodada;
 @property (nonatomic) BOOL modoSingle;
 
+
+- (IBAction)incrementaPalito:(id)sender;
+
 - (IBAction)confirmaEscolha:(id)sender;
 - (UIImageView *) novoPalito:(int)posicao;
-- (IBAction)palitoFora:(id)sender;
-- (IBAction)palitoMao:(id)sender;
 //- (void) incrementaPalito:(int) palitos andAdiciona:(UIView *) adiciona;
 
 

@@ -53,20 +53,20 @@
 		7225E214194F741C0068DF4C /* BEPApostaMultiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEPApostaMultiViewController.h; sourceTree = "<group>"; };
 		7225E215194F741C0068DF4C /* BEPApostaMultiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEPApostaMultiViewController.m; sourceTree = "<group>"; };
 		7225E216194F741C0068DF4C /* BEPApostaMultiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BEPApostaMultiViewController.xib; sourceTree = "<group>"; };
-		7257666F1933D08600879646 /* jogoPalito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jogoPalito.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7257666F1933D08600879646 /* Palitinho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Palitinho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		725766721933D08600879646 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		725766741933D08600879646 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		725766761933D08600879646 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		7257667A1933D08600879646 /* jogoPalito-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "jogoPalito-Info.plist"; sourceTree = "<group>"; };
+		7257667A1933D08600879646 /* Palitinho-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Palitinho-Info.plist"; sourceTree = "<group>"; };
 		7257667C1933D08600879646 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7257667E1933D08600879646 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		725766801933D08600879646 /* jogoPalito-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "jogoPalito-Prefix.pch"; sourceTree = "<group>"; };
+		725766801933D08600879646 /* Palitinho-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Palitinho-Prefix.pch"; sourceTree = "<group>"; };
 		725766811933D08600879646 /* BEPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BEPAppDelegate.h; sourceTree = "<group>"; };
 		725766821933D08600879646 /* BEPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BEPAppDelegate.m; sourceTree = "<group>"; };
 		725766841933D08600879646 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		7257668A1933D08700879646 /* jogoPalitoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jogoPalitoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7257668A1933D08700879646 /* PalitinhoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PalitinhoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7257668B1933D08700879646 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		725766931933D08700879646 /* jogoPalitoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "jogoPalitoTests-Info.plist"; sourceTree = "<group>"; };
+		725766931933D08700879646 /* PalitinhoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PalitinhoTests-Info.plist"; sourceTree = "<group>"; };
 		725766951933D08700879646 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		725766971933D08700879646 /* jogoPalitoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = jogoPalitoTests.m; sourceTree = "<group>"; };
 		72B129F019367F6700EB6574 /* BEPJogador.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEPJogador.h; sourceTree = "<group>"; };
@@ -173,8 +173,8 @@
 		725766701933D08600879646 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7257666F1933D08600879646 /* jogoPalito.app */,
-				7257668A1933D08700879646 /* jogoPalitoTests.xctest */,
+				7257666F1933D08600879646 /* Palitinho.app */,
+				7257668A1933D08700879646 /* PalitinhoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -211,10 +211,10 @@
 		725766791933D08600879646 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				7257667A1933D08600879646 /* jogoPalito-Info.plist */,
+				7257667A1933D08600879646 /* Palitinho-Info.plist */,
 				7257667B1933D08600879646 /* InfoPlist.strings */,
 				7257667E1933D08600879646 /* main.m */,
-				725766801933D08600879646 /* jogoPalito-Prefix.pch */,
+				725766801933D08600879646 /* Palitinho-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -231,7 +231,7 @@
 		725766921933D08700879646 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				725766931933D08700879646 /* jogoPalitoTests-Info.plist */,
+				725766931933D08700879646 /* PalitinhoTests-Info.plist */,
 				725766941933D08700879646 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -240,9 +240,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7257666E1933D08600879646 /* jogoPalito */ = {
+		7257666E1933D08600879646 /* Palitinho */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7257669B1933D08700879646 /* Build configuration list for PBXNativeTarget "jogoPalito" */;
+			buildConfigurationList = 7257669B1933D08700879646 /* Build configuration list for PBXNativeTarget "Palitinho" */;
 			buildPhases = (
 				7257666B1933D08600879646 /* Sources */,
 				7257666C1933D08600879646 /* Frameworks */,
@@ -252,14 +252,14 @@
 			);
 			dependencies = (
 			);
-			name = jogoPalito;
+			name = Palitinho;
 			productName = jogoPalito;
-			productReference = 7257666F1933D08600879646 /* jogoPalito.app */;
+			productReference = 7257666F1933D08600879646 /* Palitinho.app */;
 			productType = "com.apple.product-type.application";
 		};
-		725766891933D08700879646 /* jogoPalitoTests */ = {
+		725766891933D08700879646 /* PalitinhoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7257669E1933D08700879646 /* Build configuration list for PBXNativeTarget "jogoPalitoTests" */;
+			buildConfigurationList = 7257669E1933D08700879646 /* Build configuration list for PBXNativeTarget "PalitinhoTests" */;
 			buildPhases = (
 				725766861933D08700879646 /* Sources */,
 				725766871933D08700879646 /* Frameworks */,
@@ -270,9 +270,9 @@
 			dependencies = (
 				725766901933D08700879646 /* PBXTargetDependency */,
 			);
-			name = jogoPalitoTests;
+			name = PalitinhoTests;
 			productName = jogoPalitoTests;
-			productReference = 7257668A1933D08700879646 /* jogoPalitoTests.xctest */;
+			productReference = 7257668A1933D08700879646 /* PalitinhoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -293,7 +293,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7257666A1933D08600879646 /* Build configuration list for PBXProject "jogoPalito" */;
+			buildConfigurationList = 7257666A1933D08600879646 /* Build configuration list for PBXProject "Palitinho" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -305,8 +305,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7257666E1933D08600879646 /* jogoPalito */,
-				725766891933D08700879646 /* jogoPalitoTests */,
+				7257666E1933D08600879646 /* Palitinho */,
+				725766891933D08700879646 /* PalitinhoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -369,7 +369,7 @@
 /* Begin PBXTargetDependency section */
 		725766901933D08700879646 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7257666E1933D08600879646 /* jogoPalito */;
+			target = 7257666E1933D08600879646 /* Palitinho */;
 			targetProxy = 7257668F1933D08700879646 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -472,9 +472,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "jogoPalito/jogoPalito-Prefix.pch";
-				INFOPLIST_FILE = "jogoPalito/jogoPalito-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "jogoPalito/Palitinho-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/jogoPalito/Palitinho-Info.plist";
+				PRODUCT_NAME = Palitinho;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -488,9 +488,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "jogoPalito/jogoPalito-Prefix.pch";
-				INFOPLIST_FILE = "jogoPalito/jogoPalito-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "jogoPalito/Palitinho-Prefix.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/jogoPalito/Palitinho-Info.plist";
+				PRODUCT_NAME = Palitinho;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -511,8 +511,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "jogoPalitoTests/jogoPalitoTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "jogoPalitoTests/PalitinhoTests-Info.plist";
+				PRODUCT_NAME = PalitinhoTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -529,8 +529,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "jogoPalito/jogoPalito-Prefix.pch";
-				INFOPLIST_FILE = "jogoPalitoTests/jogoPalitoTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "jogoPalitoTests/PalitinhoTests-Info.plist";
+				PRODUCT_NAME = PalitinhoTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -539,7 +539,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7257666A1933D08600879646 /* Build configuration list for PBXProject "jogoPalito" */ = {
+		7257666A1933D08600879646 /* Build configuration list for PBXProject "Palitinho" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				725766991933D08700879646 /* Debug */,
@@ -548,7 +548,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7257669B1933D08700879646 /* Build configuration list for PBXNativeTarget "jogoPalito" */ = {
+		7257669B1933D08700879646 /* Build configuration list for PBXNativeTarget "Palitinho" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7257669C1933D08700879646 /* Debug */,
@@ -557,7 +557,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7257669E1933D08700879646 /* Build configuration list for PBXNativeTarget "jogoPalitoTests" */ = {
+		7257669E1933D08700879646 /* Build configuration list for PBXNativeTarget "PalitinhoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7257669F1933D08700879646 /* Debug */,

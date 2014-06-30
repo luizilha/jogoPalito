@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7257666E1933D08600879646"
-               BuildableName = "jogoPalito.app"
-               BlueprintName = "jogoPalito"
-               ReferencedContainer = "container:jogoPalito.xcodeproj">
+               BuildableName = "Palitinho.app"
+               BlueprintName = "Palitinho"
+               ReferencedContainer = "container:Palitinho.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "725766891933D08700879646"
-               BuildableName = "jogoPalitoTests.xctest"
-               BlueprintName = "jogoPalitoTests"
-               ReferencedContainer = "container:jogoPalito.xcodeproj">
+               BuildableName = "PalitinhoTests.xctest"
+               BlueprintName = "PalitinhoTests"
+               ReferencedContainer = "container:Palitinho.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7257666E1933D08600879646"
-            BuildableName = "jogoPalito.app"
-            BlueprintName = "jogoPalito"
-            ReferencedContainer = "container:jogoPalito.xcodeproj">
+            BuildableName = "Palitinho.app"
+            BlueprintName = "Palitinho"
+            ReferencedContainer = "container:Palitinho.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7257666E1933D08600879646"
-            BuildableName = "jogoPalito.app"
-            BlueprintName = "jogoPalito"
-            ReferencedContainer = "container:jogoPalito.xcodeproj">
+            BuildableName = "Palitinho.app"
+            BlueprintName = "Palitinho"
+            ReferencedContainer = "container:Palitinho.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7257666E1933D08600879646"
-            BuildableName = "jogoPalito.app"
-            BlueprintName = "jogoPalito"
-            ReferencedContainer = "container:jogoPalito.xcodeproj">
+            BuildableName = "Palitinho.app"
+            BlueprintName = "Palitinho"
+            ReferencedContainer = "container:Palitinho.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -26,8 +26,6 @@
     return self;
 }
 
-
-
 - (UIImageView *)novoPalito:(int)posicao
 {
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(posicao, 0, 100, 130)];
@@ -36,29 +34,42 @@
     return imageView;
 }
 
-- (IBAction)palitoFora:(id)sender
+- (IBAction)incrementaPalito:(id)sender
 {
-    if(self.incrementador > 0) {
-        self.incrementador--;
-        UIView *view = [self.viewPalitoMao.subviews objectAtIndex:self.viewPalitoMao.subviews.count-1];
-        [view removeFromSuperview];
-        [self.viewPalitoFora addSubview:[self novoPalito:(80 * self.incrementador)]];
+    if (sender == self.btnMais) {
+        if (self.incrementador < [self.jogadores[self.rodada] max]) {
+            self.incrementador++;
+        }
+    } else if (sender == self.btnMenos) {
+        if (self.incrementador > 0) {
+            self.incrementador--;
+        }
     }
-}
 
-- (IBAction)palitoMao:(id)sender
-{
-    if(self.incrementador < [self.jogadores[self.rodada] max]) {
-        UIView *view = [self.viewPalitoFora.subviews objectAtIndex:self.viewPalitoFora.subviews.count-1];
-        [view removeFromSuperview];
-        [self.viewPalitoMao addSubview:[self novoPalito:(80 * self.incrementador)]];
-        self.incrementador++;
+    // REMOVE
+    for (UIView *v in [self.viewPalitoMao subviews]) {
+        if (v != self.btnMais) {
+            [v removeFromSuperview];
+        }
+    }
+    for (UIView *v in [self.viewPalitoFora subviews]) {
+        if (v != self.btnMenos) {
+            [v removeFromSuperview];
+        }
+    }
+    // Adiciona
+    for (int i = 0; i < self.incrementador; i++) {
+        [self.viewPalitoMao addSubview:[self novoPalito:80 * i]];
+    }
+    for (int i = 0; i < ([self.jogadores[self.rodada] max]-self.incrementador); i++) {
+        [self.viewPalitoFora addSubview:[self novoPalito:80 * i]];
     }
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     self.incrementador = 0;
     for (int i = 0; i < [self.jogadores[self.rodada] max]; i++) {
         [self.viewPalitoFora addSubview:[self novoPalito:(80 * i)]];
@@ -108,6 +119,5 @@
         }
     }
 }
-
 
 @end

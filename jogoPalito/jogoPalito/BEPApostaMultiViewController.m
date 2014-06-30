@@ -34,7 +34,7 @@
     [self.lblPontuacaoJogadores setText:self.chuteJogadores];
     [self.lblTitulo setBackgroundColor:[UIColor orangeColor]];
     [self.lblTitulo setText:[NSString stringWithFormat:@"Jogador %d", self.rodada+1]];
-    self.navigationController.navigationBar.hidden = YES;
+//    self.navigationController.navigationBar.hidden = YES;
     // Do any additional setup after loading the view from its nib.
 }
 
